@@ -1,6 +1,6 @@
 import {React, useState} from 'react' 
 import '../styles.css'
-import { Grid, Stack, Divider, ListItem, Paper, TextField, Button } from '@mui/material'
+import { Grid, Stack, Divider, Paper, TextField, Button } from '@mui/material'
 import { styled } from '@mui/material/styles';
 import NavigateNextIcon from '@mui/icons-material/NavigateNext';
 
@@ -30,30 +30,38 @@ const Array = ()=>{
     }
 
     const onCreate=()=>{
-        if(arraySize > 10){
-            setInvalidInput(true);
-        }
-        else{
-            console.log(arrayValues.length,"entred")
+        if(tempVal != undefined &&tempVal.length !== undefined){
+            console.log("entred here")
             var txt = tempVal;
             var numb = txt.match(/\d/g);
             numb = numb.join("");
             for(var i=0;i<numb.length;i++){
                 values.push(numb[i])
             }
+                if(Number(arraySize)+1 == values.length){
+                    setArrayValues(values)
+                }
+                else{
+                    alert("Array size is not equal to array values")
+                    setInvalidInput(true)
+                    setInvalidArrayInput(true)
+                }
         }
-        // else if(arrayValues.length){
-        //     setHelperMessage('Enter atlest one value')
-        //     setInvalidArrayInput(true)
-        // }
-        setArrayValues(values)
+        else if(tempVal == undefined){
+            alert("Empty array")
+        }
+        else if(arraySize > 10){
+            setInvalidInput(true);
+        }
+
+
     }
 
     const arrayInput=(e)=>{
-        if(e.target.value.length > 19 && e.target.value.length<0){
+        if(e.target.value.length > 19){
             setInvalidArrayInput(true)
         }
-        else{
+        else if(e.target.value.length>0){
             setTempVal(e.target.value);
         }
 
