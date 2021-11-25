@@ -1,23 +1,90 @@
-import React from 'react'
-import Button from '@mui/material/Button'
-import Stack from '@mui/material/Stack'
-import Input from '@mui/material/Input';
-//import Item from '@mui/material/ListItem'
+import {React, useState} from 'react' 
 import '../styles.css'
+import { Grid, Stack, Divider, Paper, TextField, Button } from '@mui/material'
+import { styled } from '@mui/material/styles';
+import NavigateNextIcon from '@mui/icons-material/NavigateNext';
 
-const Stackk = ()=>{
+const Stacks = ()=>{
+
+    //Material Compoent
+    const Item = styled(Paper)(({ theme }) => ({
+        padding: theme.spacing(1.5),
+        textAlign: 'center',
+      }));
+
+
+    //Validations states
+    const [invalidInput, setInvalidInput] = useState(false)
+    const [invalidArrayInput, setInvalidArrayInput] = useState(false)
+    const [helperMessage, setHelperMessage] = useState('Enter Stack values [1,2,3,4]')
+
+
+    //state variables for actions
+    const [arraySize, setArraySize] = useState();
+    const [tempVal, setTempVal] = useState();
+    const [arrayValues, setArrayValues] = useState([])
+    const values = []
+
+    const arraySizeInput = (e)=>{
+        setArraySize(e.target.value)
+    }
+
+    const onCreate=()=>{
+        if(arraySize > 10){
+            setInvalidInput(true);
+        }
+        else{
+            console.log(arrayValues.length,"enter")
+            var txt = tempVal;
+            var numb = txt.match(/\d/g);
+            numb = numb.join("");
+            for(var i=0;i<numb.length;i++){
+                values.push(numb[i])
+            }
+        }
+        // else if(arrayValues.length){
+        //     setHelperMessage('Enter atlest one value')
+        //     setInvalidArrayInput(true)
+        // }
+        setArrayValues(values)
+    }
+
+    const arrayInput=(e)=>{
+        if(e.target.value.length > 19 && e.target.value.length<0){
+            setInvalidArrayInput(true)
+        }
+        else{
+            setTempVal(e.target.value);
+        }
+
+    }
+
+
+
     return(
         <div>
-          <h1>Stack</h1>
-          <div className="bgColor">
-           <Stack direction="row" spacing={2}>
-             <Input className="whiteColor navSize"></Input>
-             <Button variant="contained" className="navSize">Push</Button>
-             <Button variant="contained" className="navSize">Pop</Button>
-           </Stack>
-          </div>
-        </div>  
+        <Grid  direction='row' className='mainDiv' >
+            <Grid textAlign='center' className='inputClass'>
+                <TextField variant='outlined' id='inputId' label='Enter size' size='small' onChange={arraySizeInput} type='number' error={invalidInput} helperText='Enter value less than 10'> </TextField> 
+                <TextField variant='outlined' id='inputId' label='Enter values' size='small' onChange={arrayInput} error={invalidArrayInput} helperText={helperMessage}> </TextField>
+                <Button variant='contained' id='createId' onClick={onCreate}>
+                    <NavigateNextIcon/>
+                </Button>
+
+            </Grid>
+
+            <Grid> <Stack justifyContent='center' direction="row" divider={<Divider orientation="vertical" flexItem />} spacing={1} >
+                <Stack>
+                {arrayValues.map(item=>(
+                    <Item>{item}</Item>
+                ))}
+                </Stack>
+            </Stack></Grid>
+        </Grid>
+        </div>
     )
 }
 
-export default Stackk; 
+export default Stacks; 
+
+
