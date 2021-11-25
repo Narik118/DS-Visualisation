@@ -1,24 +1,23 @@
 import React from 'react'
-//import Button from '@mui/material/Button';
+import Button from '@mui/material/Button'
+import Stack from '@mui/material/Stack'
+import Input from '@mui/material/Input';
+//import Item from '@mui/material/ListItem'
+import '../styles.css'
 
-const Stack = ()=>{
+const Stackk = ()=>{
     return(
         <div>
           <h1>Stack</h1>
-          <table style="">
-              <td>
-                  <label>Input Data: </label>
-                  <input type="text" id="data"></input>
-              </td>
-              <td>
-                  <button>Push</button>
-              </td>
-              <td>
-                  <button>Pop</button>
-              </td>
-          </table>
+          <div className="bgColor">
+           <Stack direction="row" spacing={2}>
+             <Input className="whiteColor navSize"></Input>
+             <Button variant="contained" className="navSize">Push</Button>
+             <Button variant="contained" className="navSize">Pop</Button>
+           </Stack>
+          </div>
         </div>  
     )
 }
 
-export default Stack; 
+export default Stackk; 
