@@ -1,3 +1,4 @@
+
 .bgColor{
     background-color: rgb(118, 118, 228);
     height: 100px;
@@ -9,4 +10,20 @@
     margin-top: 20px;
     margin-bottom: 20px;
     margin-left: 10px;
+}
+.mainDiv{
+    padding-top: 35vh;
+}
+
+#inputId{
+    width:150px;
+}
+
+.inputClass{
+    margin-bottom: 15px;
+}
+
+#createId{
+    height: 38px;
+    margin-left: 3px;
 }
