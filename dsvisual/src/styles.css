@@ -1,0 +1,16 @@
+.mainDiv{
+    padding-top: 35vh;
+}
+
+#inputId{
+    width:150px;
+}
+
+.inputClass{
+    margin-bottom: 15px;
+}
+
+#createId{
+    height: 38px;
+    margin-left: 3px;
+}
