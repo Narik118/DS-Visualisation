@@ -16,7 +16,7 @@ const Stacks = ()=>{
     //Validations states
     const [invalidInput, setInvalidInput] = useState(false)
     const [invalidArrayInput, setInvalidArrayInput] = useState(false)
-    const [helperMessage, setHelperMessage] = useState('Enter Stack values [1,2,3,4]')
+    const [helperMessage, setHelperMessage] = useState('Enter stack values 1,2,3,4')
 
 
     //state variables for actions
@@ -30,30 +30,38 @@ const Stacks = ()=>{
     }
 
     const onCreate=()=>{
-        if(arraySize > 10){
-            setInvalidInput(true);
-        }
-        else{
-            console.log(arrayValues.length,"enter")
+        if(tempVal != undefined &&tempVal.length !== undefined){
+            console.log("entred here")
             var txt = tempVal;
             var numb = txt.match(/\d/g);
             numb = numb.join("");
             for(var i=0;i<numb.length;i++){
                 values.push(numb[i])
             }
+                if(Number(arraySize)+1 == values.length){
+                    setArrayValues(values)
+                }
+                else{
+                    alert("Stack size is not equal to Stack values")
+                    setInvalidInput(true)
+                    setInvalidArrayInput(true)
+                }
         }
-        // else if(arrayValues.length){
-        //     setHelperMessage('Enter atlest one value')
-        //     setInvalidArrayInput(true)
-        // }
-        setArrayValues(values)
+        else if(tempVal == undefined){
+            alert("Empty stack")
+        }
+        else if(arraySize > 10){
+            setInvalidInput(true);
+        }
+
+
     }
 
     const arrayInput=(e)=>{
-        if(e.target.value.length > 19 && e.target.value.length<0){
+        if(e.target.value.length > 19){
             setInvalidArrayInput(true)
         }
-        else{
+        else if(e.target.value.length>0){
             setTempVal(e.target.value);
         }
 
