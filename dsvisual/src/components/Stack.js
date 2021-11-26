@@ -97,7 +97,7 @@ const Stacks = ()=>{
         return(
             <Stack justifyContent='center' direction="row" divider={<Divider orientation="vertical" flexItem />} spacing={1} >
             <Stack direction='row'>
-            {newArr.map(item=>(
+            {arrayValues.map(item=>(
                 <Item id='itemId'>{item}</Item>
             ))}
             </Stack>
@@ -110,7 +110,7 @@ const Stacks = ()=>{
         return(
             <Stack justifyContent='center' direction="row" divider={<Divider orientation="vertical" flexItem />} spacing={1} >
             <Stack direction='row'>
-            {newArr.map(item=>(
+            {arrayValues.map(item=>(
                 <Item id='itemId'>{item}</Item>
             ))}
             </Stack>
