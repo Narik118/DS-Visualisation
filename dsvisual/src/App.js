@@ -4,12 +4,17 @@ import Stack from './components/Stack'
 import Array from './components/Array'
 import BFS from './components/BFS'
 import {BrowserRouter as Router, Routes, Route} from 'react-router-dom'
+import LandingPage from './components/LandingPage'
+import Navbar from './components/Navbar'
 
 function App() {
+
   return (
     <Router>
     <div className="App">
+      <Navbar/>
       <Routes>
+      <Route path='/' element={<LandingPage/>}> </Route>
       <Route path='Stack' element={<Stack/>}></Route>
       <Route path='Array' element={<Array/>}></Route>
       <Route path='BFS' element={<BFS/>}></Route>
