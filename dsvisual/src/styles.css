@@ -42,3 +42,9 @@ body{
 #landingGrid{
     padding: 35px 20px
 }
+.buttonSize{
+    width: 5%;
+}
+.inputSize{
+    width: 10%;
+}
