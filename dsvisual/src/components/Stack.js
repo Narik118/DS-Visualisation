@@ -9,7 +9,7 @@ import { createMuiTheme, ThemeProvider } from '@mui/material';
 const theme =  createMuiTheme({
      palette:{
          primary:{
-             main:'#800080'
+             main:'#ff6600'
          }
      },
 })
@@ -34,7 +34,7 @@ const Stacks = ()=>{
     //Validations states
     const [invalidInput, setInvalidInput] = useState(false)
     const [invalidArrayInput, setInvalidArrayInput] = useState(false)
-    const [helperMessage, setHelperMessage] = useState('Enter array values 1,2,3,4')
+    const [helperMessage, setHelperMessage] = useState('Enter stack values 1,2,3,4')
 
 
     //state variables for actions
@@ -137,8 +137,9 @@ const Stacks = ()=>{
                 <CreateArray/>
             </Grid>
         </Grid>
+        <Button onClick={popFunction} color='primary'>Stack.pop()</Button>
+        <Button onClick={popFunction}>Stack.push()</Button>
         </ThemeProvider>
-        <Button onClick={popFunction}>Stack.pop()</Button>
         </div>
     )
 }
