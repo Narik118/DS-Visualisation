@@ -1,4 +1,5 @@
 import React from 'react'
+import './styles.css'
 import Stack from './components/Stack'
 import Array from './components/Array'
 import BFS from './components/BFS'
