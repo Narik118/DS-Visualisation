@@ -91,10 +91,21 @@ const Stacks = ()=>{
     }
 
     const [newArr, setNewArr] = useState()
+    //push function
+    const pushInput = (e)=>{
+        setNewArr(arrayValues.push(e))
+        return(
+            <Stack justifyContent='center' direction="row" divider={<Divider orientation="vertical" flexItem />} spacing={1} >
+            <Stack direction='row'>
+            {newArr.map(item=>(
+                <Item id='itemId'>{item}</Item>
+            ))}
+            </Stack>
+        </Stack>
+        )
+    }
     //pop function
     const popFunction=()=>{
-        console.log(arrayValues.pop())
-
         setNewArr(arrayValues.pop())
         return(
             <Stack justifyContent='center' direction="row" divider={<Divider orientation="vertical" flexItem />} spacing={1} >
@@ -111,7 +122,7 @@ const Stacks = ()=>{
     const CreateArray=()=>{
         return(
         <Stack justifyContent='center' direction="row" divider={<Divider orientation="vertical" flexItem />} spacing={1} >
-                <Stack>
+                <Stack direction="column-reverse">
                 {arrayValues.map(item=>(
                     <Item id='itemId'>{item}</Item>
                 ))}
@@ -133,12 +144,15 @@ const Stacks = ()=>{
 
             </Grid>
 
-            <Grid> 
+            <Grid>
                 <CreateArray/>
+                <Stack spacing={1.5}>
+                 <TextField variant='outlined' className={classes.textFeild} className="inputSize" id='inputId' label='Enter value' size='small' type='number' error={invalidInput} onChange={pushInput} name='pushValue'> </TextField>
+                 <Button variant='contained' className="buttonSize" onClick={pushInput}>PUSH</Button>
+                 <Button variant='contained' className="buttonSize" onClick={popFunction}>POP</Button>
+                </Stack>
             </Grid>
         </Grid>
-        <Button onClick={popFunction} color='primary'>Stack.pop()</Button>
-        <Button onClick={popFunction}>Stack.push()</Button>
         </ThemeProvider>
         </div>
     )

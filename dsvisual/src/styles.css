@@ -26,3 +26,9 @@
 #itemId{
     color: '#800080' !important;
 }
+.buttonSize{
+    width: 5%;
+}
+.inputSize{
+    width: 10%;
+}
