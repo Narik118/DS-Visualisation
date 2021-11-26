@@ -1,15 +1,33 @@
-import {React, useState} from 'react' 
+import {React, useEffect, useState} from 'react' 
 import '../styles.css'
 import { Grid, Stack, Divider, Paper, TextField, Button } from '@mui/material'
-import { styled } from '@mui/material/styles';
+import { makeStyles, styled } from '@mui/styles';
 import NavigateNextIcon from '@mui/icons-material/NavigateNext';
+import { createMuiTheme, ThemeProvider } from '@mui/material';
+
+
+const theme =  createMuiTheme({
+     palette:{
+         primary:{
+             main:'#800080'
+         }
+     },
+})
+
+const useStyles = makeStyles(theme=>({
+    textFeild:{
+        borderColor:'orange'
+    }
+}))
 
 const Array = ()=>{
+    const classes = useStyles();
 
     //Material Compoent
     const Item = styled(Paper)(({ theme }) => ({
         padding: theme.spacing(1.5),
         textAlign: 'center',
+        width:'50px'
       }));
 
 
@@ -25,12 +43,17 @@ const Array = ()=>{
     const [arrayValues, setArrayValues] = useState([])
     const values = []
 
+
+    useEffect(()=>{
+        <CreateArray/>
+    },[arrayValues])
+
     const arraySizeInput = (e)=>{
         setArraySize(e.target.value)
     }
 
     const onCreate=()=>{
-        if(tempVal != undefined &&tempVal.length !== undefined){
+        if(tempVal !== undefined &&tempVal.length !== undefined){
             console.log("entred here")
             var txt = tempVal;
             var numb = txt.match(/\d/g);
@@ -38,7 +61,7 @@ const Array = ()=>{
             for(var i=0;i<numb.length;i++){
                 values.push(numb[i])
             }
-                if(Number(arraySize)+1 == values.length){
+                if(Number(arraySize)+1 === values.length){
                     setArrayValues(values)
                 }
                 else{
@@ -47,7 +70,7 @@ const Array = ()=>{
                     setInvalidArrayInput(true)
                 }
         }
-        else if(tempVal == undefined){
+        else if(tempVal === undefined){
             alert("Empty array")
         }
         else if(arraySize > 10){
@@ -67,13 +90,42 @@ const Array = ()=>{
 
     }
 
+    const [newArr, setNewArr] = useState()
+    //pop function
+    const popFunction=()=>{
+        console.log(arrayValues.pop())
 
+        setNewArr(arrayValues.pop())
+        return(
+            <Stack justifyContent='center' direction="row" divider={<Divider orientation="vertical" flexItem />} spacing={1} >
+            <Stack direction='row'>
+            {newArr.map(item=>(
+                <Item id='itemId'>{item}</Item>
+            ))}
+            </Stack>
+        </Stack>
+        )
+    }
+
+
+    const CreateArray=()=>{
+        return(
+        <Stack justifyContent='center' direction="row" divider={<Divider orientation="vertical" flexItem />} spacing={1} >
+                <Stack direction='row'>
+                {arrayValues.map(item=>(
+                    <Item id='itemId'>{item}</Item>
+                ))}
+                </Stack>
+            </Stack>
+        )
+    }
 
     return(
         <div>
+            <ThemeProvider theme={theme}>
         <Grid  direction='row' className='mainDiv' >
             <Grid textAlign='center' className='inputClass'>
-                <TextField variant='outlined' id='inputId' label='Enter size' size='small' onChange={arraySizeInput} type='number' error={invalidInput} helperText='Enter value less than 10'> </TextField> 
+                <TextField variant='outlined' className={classes.textFeild} id='inputId' label='Enter size' size='small' onChange={arraySizeInput} type='number' error={invalidInput} helperText='Enter value less than 10'> </TextField> 
                 <TextField variant='outlined' id='inputId' label='Enter values' size='small' onChange={arrayInput} error={invalidArrayInput} helperText={helperMessage}> </TextField>
                 <Button variant='contained' id='createId' onClick={onCreate}>
                     <NavigateNextIcon/>
@@ -81,14 +133,12 @@ const Array = ()=>{
 
             </Grid>
 
-            <Grid> <Stack justifyContent='center' direction="row" divider={<Divider orientation="vertical" flexItem />} spacing={1} >
-                <Stack direction='row'>
-                {arrayValues.map(item=>(
-                    <Item>{item}</Item>
-                ))}
-                </Stack>
-            </Stack></Grid>
+            <Grid> 
+                <CreateArray/>
+            </Grid>
         </Grid>
+        </ThemeProvider>
+        <Button onClick={popFunction}>array.pop()</Button>
         </div>
     )
 }
