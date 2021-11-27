@@ -1,6 +1,6 @@
 import {React, useEffect, useState} from 'react' 
 import '../styles.css'
-import { Grid, Stack, Divider, Paper, TextField, Button } from '@mui/material'
+import { Grid, Stack, Divider, Paper, TextField, Button,} from '@mui/material'
 import { makeStyles, styled } from '@mui/styles';
 import NavigateNextIcon from '@mui/icons-material/NavigateNext';
 import { createMuiTheme, ThemeProvider } from '@mui/material';
@@ -93,6 +93,7 @@ const Stacks = ()=>{
     const [newArr, setNewArr] = useState()
     //push function
     const pushInput = (e)=>{
+        console.log(e)
         setNewArr(arrayValues.push(e))
         return(
             <Stack justifyContent='center' direction="row" divider={<Divider orientation="vertical" flexItem />} spacing={1} >
@@ -117,12 +118,33 @@ const Stacks = ()=>{
         </Stack>
         )
     }
+    //peek function
+    const peekFunction=()=>{
+        if(arrayValues.length == 0){
+            alert("Stack is Empty")
+        }
+        else{
+            var lastElement = arrayValues[-1]
+            console.log(lastElement)
+        }
+
+    }
+    //Empty function
+    const emptyFunction=()=>{
+        if(arrayValues.length == 0){
+            alert("Stack is Empty")
+        }
+        else if(arrayValues.length != null){
+            console.log(arrayValues)
+            alert("Stack is Full")
+        }
+    }
 
 
     const CreateArray=()=>{
         return(
         <Stack justifyContent='center' direction="row" divider={<Divider orientation="vertical" flexItem />} spacing={1} >
-                <Stack direction="column-reverse">
+                <Stack direction="column-reverse" className='outputSize'>
                 {arrayValues.map(item=>(
                     <Item id='itemId'>{item}</Item>
                 ))}
@@ -134,24 +156,22 @@ const Stacks = ()=>{
     return(
         <div>
             <ThemeProvider theme={theme}>
-        <Grid  direction='row' className='mainDiv' >
-            <Grid textAlign='center' className='inputClass'>
-                <TextField variant='outlined' className={classes.textFeild} id='inputId' label='Enter size' size='small' onChange={arraySizeInput} type='number' error={invalidInput} helperText='Enter value less than 10'> </TextField> 
-                <TextField variant='outlined' id='inputId' label='Enter values' size='small' onChange={arrayInput} error={invalidArrayInput} helperText={helperMessage}> </TextField>
-                <Button variant='contained' id='createId' onClick={onCreate}>
+        <Grid  direction='row' className='mainDiv' container >
+            <Grid textAlign='left' className='inputClass'>
+                <Stack direction="row" spacing={3}>
+                  <TextField variant='outlined' className={classes.textFeild} id='inputId' label='Enter size' size='small' onChange={arraySizeInput} type='number' error={invalidInput} helperText='Enter value less than 10'> </TextField> 
+                  <TextField variant='outlined' id='inputId' label='Enter values' size='small' onChange={arrayInput} error={invalidArrayInput} helperText={helperMessage}> </TextField>
+                  <Button variant='contained' id='createId' onClick={onCreate}>
                     <NavigateNextIcon/>
-                </Button>
-
-            </Grid>
-
-            <Grid>
-                <CreateArray/>
-                <Stack spacing={1.5}>
-                 <TextField variant='outlined' className={classes.textFeild} className="inputSize" id='inputId' label='Enter value' size='small' type='number' error={invalidInput} onChange={pushInput} name='pushValue'> </TextField>
-                 <Button variant='contained' className="buttonSize" onClick={pushInput}>PUSH</Button>
-                 <Button variant='contained' className="buttonSize" onClick={popFunction}>POP</Button>
+                  </Button>
+                  <TextField variant='outlined' className={classes.textFeild} id='inputId' label='Enter value' size='small' type='number' error={invalidInput} onChange={pushInput}> </TextField>
+                  <Button variant='contained' id='createId' onClick={pushInput}>PUSH</Button>
+                  <Button variant='contained' id='createId' onClick={popFunction}>POP</Button>
+                  <Button variant='contained' id='createId' onClick={peekFunction}>PEEK</Button>
+                  <Button variant='contained' id='createId' onClick={emptyFunction}>Is Empty</Button>
                 </Stack>
             </Grid>
+                <CreateArray/>
         </Grid>
         </ThemeProvider>
         </div>
