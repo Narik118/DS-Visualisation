@@ -9,14 +9,17 @@ import { createMuiTheme, ThemeProvider } from '@mui/material';
 const theme =  createMuiTheme({
      palette:{
          primary:{
-             main:'#800080'
-         }
+             main:'#f6f6f6'
+         } 
      },
+     overrides:{
+
+     }
 })
 
 const useStyles = makeStyles(theme=>({
     textFeild:{
-        borderColor:'orange'
+        color:'#f6f6f6'
     }
 }))
 
@@ -25,9 +28,10 @@ const Array = ()=>{
 
     //Material Compoent
     const Item = styled(Paper)(({ theme }) => ({
-        padding: theme.spacing(1.5),
+        padding: theme.spacing(1),
         textAlign: 'center',
-        width:'50px'
+        width:'50px',
+        marginLeft:'3px'
       }));
 
 
@@ -93,13 +97,12 @@ const Array = ()=>{
     const [newArr, setNewArr] = useState()
     //pop function
     const popFunction=()=>{
-        console.log(arrayValues.pop())
 
         setNewArr(arrayValues.pop())
         return(
             <Stack justifyContent='center' direction="row" divider={<Divider orientation="vertical" flexItem />} spacing={1} >
             <Stack direction='row'>
-            {newArr.map(item=>(
+            {arrayValues.map(item=>(
                 <Item id='itemId'>{item}</Item>
             ))}
             </Stack>
@@ -125,8 +128,8 @@ const Array = ()=>{
             <ThemeProvider theme={theme}>
         <Grid  direction='row' className='mainDiv' >
             <Grid textAlign='center' className='inputClass'>
-                <TextField variant='outlined' className={classes.textFeild} id='inputId' label='Enter size' size='small' onChange={arraySizeInput} type='number' error={invalidInput} helperText='Enter value less than 10'> </TextField> 
-                <TextField variant='outlined' id='inputId' label='Enter values' size='small' onChange={arrayInput} error={invalidArrayInput} helperText={helperMessage}> </TextField>
+                <TextField variant='outlined' color='primary' focused className={classes.textFeild} id='inputId' label='Enter size' size='small' onChange={arraySizeInput} type='number' error={invalidInput} helperText='Enter value less than 10'> </TextField> 
+                <TextField variant='outlined' id='inputId' focused label='Enter values' size='small' onChange={arrayInput} error={invalidArrayInput} helperText={helperMessage}> </TextField>
                 <Button variant='contained' id='createId' onClick={onCreate}>
                     <NavigateNextIcon/>
                 </Button>
@@ -137,8 +140,8 @@ const Array = ()=>{
                 <CreateArray/>
             </Grid>
         </Grid>
-        </ThemeProvider>
         <Button onClick={popFunction}>array.pop()</Button>
+        </ThemeProvider>
         </div>
     )
 }

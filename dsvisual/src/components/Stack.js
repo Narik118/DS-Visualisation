@@ -9,7 +9,7 @@ import { createMuiTheme, ThemeProvider } from '@mui/material';
 const theme =  createMuiTheme({
      palette:{
          primary:{
-             main:'#800080'
+             main:'#ff6600'
          }
      },
 })
@@ -34,7 +34,7 @@ const Stacks = ()=>{
     //Validations states
     const [invalidInput, setInvalidInput] = useState(false)
     const [invalidArrayInput, setInvalidArrayInput] = useState(false)
-    const [helperMessage, setHelperMessage] = useState('Enter array values 1,2,3,4')
+    const [helperMessage, setHelperMessage] = useState('Enter stack values 1,2,3,4')
 
 
     //state variables for actions
@@ -91,15 +91,26 @@ const Stacks = ()=>{
     }
 
     const [newArr, setNewArr] = useState()
+    //push function
+    const pushInput = (e)=>{
+        setNewArr(arrayValues.push(e))
+        return(
+            <Stack justifyContent='center' direction="row" divider={<Divider orientation="vertical" flexItem />} spacing={1} >
+            <Stack direction='row'>
+            {arrayValues.map(item=>(
+                <Item id='itemId'>{item}</Item>
+            ))}
+            </Stack>
+        </Stack>
+        )
+    }
     //pop function
     const popFunction=()=>{
-        console.log(arrayValues.pop())
-
         setNewArr(arrayValues.pop())
         return(
             <Stack justifyContent='center' direction="row" divider={<Divider orientation="vertical" flexItem />} spacing={1} >
             <Stack direction='row'>
-            {newArr.map(item=>(
+            {arrayValues.map(item=>(
                 <Item id='itemId'>{item}</Item>
             ))}
             </Stack>
@@ -111,7 +122,7 @@ const Stacks = ()=>{
     const CreateArray=()=>{
         return(
         <Stack justifyContent='center' direction="row" divider={<Divider orientation="vertical" flexItem />} spacing={1} >
-                <Stack>
+                <Stack direction="column-reverse">
                 {arrayValues.map(item=>(
                     <Item id='itemId'>{item}</Item>
                 ))}
@@ -133,12 +144,16 @@ const Stacks = ()=>{
 
             </Grid>
 
-            <Grid> 
+            <Grid>
                 <CreateArray/>
+                <Stack spacing={1.5}>
+                 <TextField variant='outlined' className={classes.textFeild} className="inputSize" id='inputId' label='Enter value' size='small' type='number' error={invalidInput} onChange={pushInput} name='pushValue'> </TextField>
+                 <Button variant='contained' className="buttonSize" onClick={pushInput}>PUSH</Button>
+                 <Button variant='contained' className="buttonSize" onClick={popFunction}>POP</Button>
+                </Stack>
             </Grid>
         </Grid>
         </ThemeProvider>
-        <Button onClick={popFunction}>Stack.pop()</Button>
         </div>
     )
 }
