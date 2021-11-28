@@ -17,7 +17,7 @@ function App() {
       <Route path='/' element={<LandingPage/>}> </Route>
       <Route path='Stack' element={<Stack/>}></Route>
       <Route path='Array' element={<Array/>}></Route>
-      <Route path='BFS' element={<BFS/>}></Route>
+      <Route path='BST' element={<BFS/>}></Route>
       </Routes>
     </div>
     </Router>

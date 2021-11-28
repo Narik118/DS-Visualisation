@@ -3,7 +3,7 @@ import React from 'react'
 import arr from '../images/arrayDS.jpg'
 import { createMuiTheme, ThemeProvider } from '@mui/material';
 import '../styles.css'
-
+import stackImg from '../images/stackImg.jpg'
 const LandingPage = ()=>{
 
     const theme =  createMuiTheme({
@@ -46,9 +46,9 @@ const LandingPage = ()=>{
                     <Typography gutterBottom variant="h5" id="boldText" component="div">
                     Array
                     </Typography>
-                    <Typography variant="body2" >
-                    Lizards are a widespread group of squamate reptiles, with over 6,000
-                    species, ranging across all continents except Antarctica
+                    <Typography variant="body2"  id="lightBlodText">
+                    An array is a data structure for storing more than one data item of similar data type. 
+                    The items of an array are allocated at adjacent memory locations.
                     </Typography>
                 </CardContent>
                 <CardActions>
@@ -60,10 +60,10 @@ const LandingPage = ()=>{
 
             <Grid item xs={12} sm={4} md={4}>
                  <Card >
-                <CardMedia sx={{ maxWidth: 345 }}
+                <CardMedia 
                     component="img"
                     height="150"
-                    image={arr}
+                    image={stackImg}
                     alt="array imgage"
                     sx={{
                         objectFit:'fill'
@@ -79,7 +79,7 @@ const LandingPage = ()=>{
                     </Typography>
                 </CardContent>
                 <CardActions>
-                    <Button href='Array' variant='contained' id="lighBoldText" size="small">Visualise</Button>
+                    <Button href='Stack' variant='contained' id="lighBoldText" size="small">Visualise</Button>
                 </CardActions>
                 </Card>
             </Grid>
@@ -87,7 +87,7 @@ const LandingPage = ()=>{
 
             <Grid item xs={12} sm={4} md={4}>
                  <Card >
-                <CardMedia sx={{ maxWidth: 345 }}
+                <CardMedia
                     component="img"
                     height="150"
                     image={arr}
@@ -106,7 +106,7 @@ const LandingPage = ()=>{
                     </Typography>
                 </CardContent>
                 <CardActions>
-                    <Button href='Array' variant='contained' id="lighBoldText" size="small">Visualise</Button>
+                    <Button href='/' variant='contained' id="lighBoldText" size="small">Visualise</Button>
                 </CardActions>
                 </Card>
             </Grid>
@@ -114,7 +114,7 @@ const LandingPage = ()=>{
 
             <Grid item xs={12} sm={4} md={4}>
                  <Card >
-                <CardMedia sx={{ maxWidth: 345 }}
+                <CardMedia
                     component="img"
                     height="150"
                     image={arr}
@@ -133,7 +133,7 @@ const LandingPage = ()=>{
                     </Typography>
                 </CardContent>
                 <CardActions>
-                    <Button href='Array' variant='contained' id="lighBoldText" size="small">Visualise</Button>
+                    <Button href='BST' variant='contained' id="lighBoldText" size="small">Visualise</Button>
                 </CardActions>
                 </Card>
             </Grid>
@@ -141,7 +141,7 @@ const LandingPage = ()=>{
 
             <Grid item xs={12} sm={4} md={4}>
                  <Card >
-                <CardMedia sx={{ maxWidth: 345 }}
+                <CardMedia 
                     component="img"
                     height="150"
                     image={arr}
@@ -152,7 +152,7 @@ const LandingPage = ()=>{
                 />
                 <CardContent>
                     <Typography gutterBottom variant="h5" id="boldText" component="div">
-                    Array
+                    Linked List
                     </Typography>
                     <Typography variant="body2" >
                     Lizards are a widespread group of squamate reptiles, with over 6,000
@@ -160,7 +160,7 @@ const LandingPage = ()=>{
                     </Typography>
                 </CardContent>
                 <CardActions>
-                    <Button href='Array'  variant='contained' id="lighBoldText" size="small">Visualise</Button>
+                    <Button href='/'  variant='contained' id="lighBoldText" size="small">Visualise</Button>
                 </CardActions>
                 </Card>
             </Grid>
@@ -168,7 +168,7 @@ const LandingPage = ()=>{
 
             <Grid item xs={12} sm={4} md={4}>
                 <Card >
-                <CardMedia sx={{ maxWidth: 345 }}
+                <CardMedia 
                     component="img"
                     height="150"
                     image={arr}
@@ -179,7 +179,7 @@ const LandingPage = ()=>{
                 />
                 <CardContent>
                     <Typography gutterBottom variant="h5" id="boldText" component="div">
-                    Array
+                    Graph
                     </Typography>
                     <Typography variant="body2" >
                     Lizards are a widespread group of squamate reptiles, with over 6,000
@@ -187,7 +187,7 @@ const LandingPage = ()=>{
                     </Typography>
                 </CardContent>
                 <CardActions>
-                    <Button href='Array' variant='contained' id="lighBoldText" size="small">Visualise</Button>
+                    <Button href='/' variant='contained' id="lighBoldText" size="small">Visualise</Button>
                 </CardActions>
                 </Card>
             </Grid>
