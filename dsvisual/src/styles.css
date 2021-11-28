@@ -41,7 +41,10 @@ body{
     font-weight:400
 }
 #landingGrid{
-    padding: 35px 45px
+    padding: 35px 45px;
+}
+#landingItem{
+    padding:20px;
 }
 .inputSize{
     width: 10%;

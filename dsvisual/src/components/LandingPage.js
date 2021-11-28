@@ -31,7 +31,7 @@ const LandingPage = ()=>{
         <Grid container rowSpacing={2} columnSpacing={2} justifyContent='space-around' alignItems='center' id='landingGrid'>
 
 
-            <Grid item xs={12} sm={4} md={4}>
+            <Grid id='landingItem' item xs={12} sm={4} md={4}>
                 <Card >
                 <CardMedia 
                     component="img"
@@ -47,8 +47,8 @@ const LandingPage = ()=>{
                     Array
                     </Typography>
                     <Typography variant="body2"  id="lightBlodText">
-                    An array is a data structure for storing more than one data item of similar data type. 
-                    The items of an array are allocated at adjacent memory locations.
+                    An array is a data structure for storing more than one data item of similar data type,
+                    which take adjacent memory locations.
                     </Typography>
                 </CardContent>
                 <CardActions>
@@ -58,7 +58,7 @@ const LandingPage = ()=>{
             </Grid>
 
 
-            <Grid item xs={12} sm={4} md={4}>
+            <Grid id='landingItem' item xs={12} sm={4} md={4}>
                  <Card >
                 <CardMedia 
                     component="img"
@@ -85,7 +85,7 @@ const LandingPage = ()=>{
             </Grid>
 
 
-            <Grid item xs={12} sm={4} md={4}>
+            <Grid id='landingItem' item xs={12} sm={4} md={4}>
                  <Card >
                 <CardMedia
                     component="img"
@@ -112,7 +112,7 @@ const LandingPage = ()=>{
             </Grid>
 
 
-            <Grid item xs={12} sm={4} md={4}>
+            <Grid id='landingItem' item xs={12} sm={4} md={4}>
                  <Card >
                 <CardMedia
                     component="img"
@@ -139,7 +139,7 @@ const LandingPage = ()=>{
             </Grid>
 
 
-            <Grid item xs={12} sm={4} md={4}>
+            <Grid id='landingItem'item xs={12} sm={4} md={4}>
                  <Card >
                 <CardMedia 
                     component="img"
@@ -166,7 +166,7 @@ const LandingPage = ()=>{
             </Grid>
 
 
-            <Grid item xs={12} sm={4} md={4}>
+            <Grid id='landingItem' item xs={12} sm={4} md={4}>
                 <Card >
                 <CardMedia 
                     component="img"
