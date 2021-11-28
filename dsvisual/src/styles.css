@@ -10,7 +10,7 @@ body{
     height: 100vh;
 }
 .mainDiv{
-    padding-top: 35vh;
+    padding-top: 35px;
 }
 
 #inputId{
@@ -20,6 +20,7 @@ body{
 
 .inputClass{
     margin-bottom: 15px;
+    margin-left: 15px;
 }
 
 #createId{
@@ -42,9 +43,10 @@ body{
 #landingGrid{
     padding: 35px 45px
 }
-.buttonSize{
-    width: 5%;
-}
 .inputSize{
     width: 10%;
+}
+.outputSize{
+    margin-top: 100px;
+    margin-right: 1200%;
 }
