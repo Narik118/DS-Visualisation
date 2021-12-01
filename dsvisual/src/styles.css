@@ -52,3 +52,13 @@ body{
 .outputSize{
     margin-top: 100px;
 }
+.homePage{
+    color: white;
+}
+.textSize{
+    font-size: 75px;
+}
+.homeAdjust{
+    margin-top: 15px;
+    margin-bottom: 15px;
+}

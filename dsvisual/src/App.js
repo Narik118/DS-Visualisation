@@ -16,7 +16,7 @@ function App() {
       <Navbar/>
       <Routes>
       <Route path='/' element={<Home/>}> </Route>
-      <Route path='Home' element={<LandingPage/>}> </Route>
+      <Route path='Dslist' element={<LandingPage/>}> </Route>
       <Route path='Stack' element={<Stack/>}></Route>
       <Route path='Array' element={<Array/>}></Route>
       <Route path='BST' element={<BFS/>}></Route>
