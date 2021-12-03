@@ -1,9 +1,10 @@
 import {React, useEffect, useState} from 'react' 
 import '../styles.css'
-import { Grid, Stack, Divider, Paper, TextField, Button } from '@mui/material'
+import { Grid, Stack, Divider, Paper, TextField, Button, Alert, Snackbar } from '@mui/material'
 import { makeStyles, styled } from '@mui/styles';
 import NavigateNextIcon from '@mui/icons-material/NavigateNext';
 import { createMuiTheme, ThemeProvider } from '@mui/material';
+import AlertNotify from './Alert';
 
 
 const theme =  createMuiTheme({
@@ -58,7 +59,6 @@ const Array = ()=>{
 
     const onCreate=()=>{
         if(tempVal !== undefined &&tempVal.length !== undefined){
-            console.log("entred here")
             var txt = tempVal;
             var numb = txt.match(/\d/g);
             numb = numb.join("");
@@ -69,19 +69,26 @@ const Array = ()=>{
                     setArrayValues(values)
                 }
                 else{
-                    alert("Array size is not equal to array values")
                     setInvalidInput(true)
                     setInvalidArrayInput(true)
+                    console.log("array size")
+                    // alert("Array size is not equal to array values")
+                    // setSeverityLevel('error')
+                    // setALertMess("Array size is not equal to array values")
+
+                    // setOpen(true)
+
                 }
         }
         else if(tempVal === undefined){
-            alert("Empty array")
+            console.log("empty array ")
+            // setSeverityLevel('error')
+            // setALertMess("Empty Array")
+            // setOpen(true)
         }
         else if(arraySize > 10){
             setInvalidInput(true);
         }
-
-
     }
 
     const arrayInput=(e)=>{
@@ -94,11 +101,10 @@ const Array = ()=>{
 
     }
 
-    const [newArr, setNewArr] = useState()
     //pop function
     const popFunction=()=>{
 
-        setNewArr(arrayValues.pop())
+        arrayValues.pop()
         return(
             <Stack justifyContent='center' direction="row" divider={<Divider orientation="vertical" flexItem />} spacing={1} >
             <Stack direction='row'>
@@ -111,6 +117,7 @@ const Array = ()=>{
     }
 
 
+    //create the initial array
     const CreateArray=()=>{
         return(
         <Stack justifyContent='center' direction="row" divider={<Divider orientation="vertical" flexItem />} spacing={1} >
@@ -123,23 +130,49 @@ const Array = ()=>{
         )
     }
 
+    //ALert message function
+    const AlertNotification=()=>{
+        return(
+            <AlertNotify obj={{alertMess:'Empty Array', alertLevel:'error', open:true}} ></AlertNotify>
+        )
+    }
+
     return(
         <div>
-            <ThemeProvider theme={theme}>
-        <Grid  direction='row' className='mainDiv' >
-            <Grid textAlign='center' className='inputClass'>
-                <TextField variant='outlined' color='primary' focused className={classes.textFeild} id='inputId' label='Enter size' size='small' onChange={arraySizeInput} type='number' error={invalidInput} helperText='Enter value less than 10'> </TextField> 
-                <TextField variant='outlined' id='inputId' focused label='Enter values' size='small' onChange={arrayInput} error={invalidArrayInput} helperText={helperMessage}> </TextField>
-                <Button variant='contained' id='createId' onClick={onCreate}>
-                    <NavigateNextIcon/>
-                </Button>
+        <ThemeProvider theme={theme}>
+            <Grid container>
+
+                <Grid item xs={12} md={6} direction='column' alignItems="center"  className='inputClass'>
+                    <TextField variant='outlined' color='primary' focused className={classes.textFeild} id='inputId' label='Enter size' size='small' onChange={arraySizeInput} type='number' error={invalidInput} helperText='Enter value less than 10'> </TextField> 
+                    <TextField variant='outlined' id='inputId' focused label='Enter values' size='small' onChange={arrayInput} error={invalidArrayInput} helperText={helperMessage}> </TextField>
+                    <Button variant='contained' id='createId' onClick={onCreate}>
+                        <NavigateNextIcon/>
+                    </Button>
+                 </Grid>
+
+                <Grid item xs={12} md={6}> 
+                    <h1>Something here</h1>
+                    <CreateArray/>
+                </Grid>
+
+                <Grid item xs={12} md={6}> 
+                    <h1>Something here</h1>
+                </Grid>
+
+                <Grid item xs={12} md={6}> 
+                    <h1>Something here</h1>
+                    {invalidInput ? <AlertNotification/> : <h1>nothing here</h1>}
+                </Grid>
 
             </Grid>
 
-            <Grid> 
-                <CreateArray/>
-            </Grid>
-        </Grid>
+
+
+
+
+
+
+
         <Button onClick={popFunction}>array.pop()</Button>
         </ThemeProvider>
         </div>
