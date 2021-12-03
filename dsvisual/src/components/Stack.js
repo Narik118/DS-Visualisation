@@ -41,6 +41,7 @@ const Stacks = ()=>{
     const [arraySize, setArraySize] = useState();
     const [tempVal, setTempVal] = useState();
     const [arrayValues, setArrayValues] = useState([])
+    const [newVal, setNewVal] = useState();
     const values = []
 
 
@@ -90,14 +91,16 @@ const Stacks = ()=>{
 
     }
     const pushInputValue = (e)=>{
-        setNewArr(arrayValues.push(e.target.value))
+        setNewVal(e.target.value)
         console.log("message 2")
     }
 
     const [newArr, setNewArr] = useState()
     //push function
-    const pushInput = (e)=>{
-        console.log(e.target.value,"message")
+    const pushInput = ()=>{
+        console.log(newVal,"message")
+        setNewArr(arrayValues.push(newVal))
+        console.log(arrayValues)
         
         return(
             <Stack justifyContent='center' direction="row" divider={<Divider orientation="vertical" flexItem />} spacing={1} >
