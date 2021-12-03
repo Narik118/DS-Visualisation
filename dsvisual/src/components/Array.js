@@ -166,13 +166,6 @@ const Array = ()=>{
 
             </Grid>
 
-
-
-
-
-
-
-
         <Button onClick={popFunction}>array.pop()</Button>
         </ThemeProvider>
         </div>
