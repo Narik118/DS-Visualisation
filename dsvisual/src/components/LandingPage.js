@@ -4,6 +4,9 @@ import arr from '../images/arrayDS.jpg'
 import { createMuiTheme, ThemeProvider } from '@mui/material';
 import '../styles.css'
 import stackImg from '../images/stackImg.jpg'
+import Bounce from 'react-reveal/Bounce';
+
+
 const LandingPage = ()=>{
 
     const theme =  createMuiTheme({
@@ -28,10 +31,8 @@ const LandingPage = ()=>{
     return(
         <div>
             <ThemeProvider theme={theme}>
-        <Grid container rowSpacing={2} columnSpacing={2} justifyContent='space-around' alignItems='center' id='landingGrid'>
-
-
-            <Grid id='landingItem' item xs={12} sm={4} md={4}>
+                 <Grid container rowSpacing={2} columnSpacing={2} justifyContent='space-around' alignItems='center' id='landingGrid'>
+                <Grid id='landingItem' item xs={12} sm={4} md={4}>
                 <Card >
                 <CardMedia 
                     component="img"
@@ -74,8 +75,8 @@ const LandingPage = ()=>{
                     Stack
                     </Typography>
                     <Typography variant="body2" >
-                    Lizards are a widespread group of squamate reptiles, with over 6,000
-                    species, ranging across all continents except Antarctica
+                    An array is a data structure for storing more than one data item of similar data type,
+                    which take adjacent memory locations.
                     </Typography>
                 </CardContent>
                 <CardActions>
@@ -101,8 +102,8 @@ const LandingPage = ()=>{
                     Queue
                     </Typography>
                     <Typography variant="body2" >
-                    Lizards are a widespread group of squamate reptiles, with over 6,000
-                    species, ranging across all continents except Antarctica
+                    An array is a data structure for storing more than one data item of similar data type,
+                    which take adjacent memory locations.
                     </Typography>
                 </CardContent>
                 <CardActions>
@@ -128,8 +129,8 @@ const LandingPage = ()=>{
                     Binary Search Tree
                     </Typography>
                     <Typography variant="body2" >
-                    Lizards are a widespread group of squamate reptiles, with over 6,000
-                    species, ranging across all continents except Antarctica
+                    An array is a data structure for storing more than one data item of similar data type,
+                    which take adjacent memory locations.
                     </Typography>
                 </CardContent>
                 <CardActions>
@@ -155,8 +156,8 @@ const LandingPage = ()=>{
                     Linked List
                     </Typography>
                     <Typography variant="body2" >
-                    Lizards are a widespread group of squamate reptiles, with over 6,000
-                    species, ranging across all continents except Antarctica
+                    An array is a data structure for storing more than one data item of similar data type,
+                    which take adjacent memory locations.
                     </Typography>
                 </CardContent>
                 <CardActions>
@@ -182,8 +183,8 @@ const LandingPage = ()=>{
                     Graph
                     </Typography>
                     <Typography variant="body2" >
-                    Lizards are a widespread group of squamate reptiles, with over 6,000
-                    species, ranging across all continents except Antarctica
+                    An array is a data structure for storing more than one data item of similar data type,
+                    which take adjacent memory locations.
                     </Typography>
                 </CardContent>
                 <CardActions>
@@ -191,8 +192,6 @@ const LandingPage = ()=>{
                 </CardActions>
                 </Card>
             </Grid>
-
-
         </Grid>   
         </ThemeProvider>
         </div>

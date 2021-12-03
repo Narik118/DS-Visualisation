@@ -7,6 +7,9 @@ import {BrowserRouter as Router, Routes, Route} from 'react-router-dom'
 import LandingPage from './components/LandingPage'
 import Navbar from './components/Navbar'
 import Home from './components/Home'
+import Zoom from 'react-reveal/Zoom';
+import Fade from 'react-reveal/Fade';
+import Bounce from 'react-reveal/Bounce';
 
 function App() {
 
@@ -14,6 +17,7 @@ function App() {
     <Router>
     <div className="App">
       <Navbar/>
+      <Fade>
       <Routes>
       <Route path='/' element={<Home/>}> </Route>
       <Route path='Dslist' element={<LandingPage/>}> </Route>
@@ -21,6 +25,7 @@ function App() {
       <Route path='Array' element={<Array/>}></Route>
       <Route path='BST' element={<BFS/>}></Route>
       </Routes>
+      </Fade>
     </div>
     </Router>
   );
