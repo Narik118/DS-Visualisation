@@ -7,16 +7,16 @@ import { createMuiTheme, ThemeProvider } from '@mui/material';
 
 
 const theme =  createMuiTheme({
-     palette:{
-         primary:{
-             main:'#ff6600'
-         }
-     },
+    palette:{
+        primary:{
+            main:'#f6f6f6'
+        } 
+    },
 })
 
 const useStyles = makeStyles(theme=>({
     textFeild:{
-        borderColor:'orange'
+        color:'#f6f6f6'
     }
 }))
 
@@ -41,6 +41,7 @@ const Stacks = ()=>{
     const [arraySize, setArraySize] = useState();
     const [tempVal, setTempVal] = useState();
     const [arrayValues, setArrayValues] = useState([])
+    const [newVal, setNewVal] = useState();
     const values = []
 
 
@@ -89,12 +90,18 @@ const Stacks = ()=>{
         }
 
     }
+    const pushInputValue = (e)=>{
+        setNewVal(e.target.value)
+        console.log("message 2")
+    }
 
     const [newArr, setNewArr] = useState()
     //push function
-    const pushInput = (e)=>{
-        console.log(e)
-        setNewArr(arrayValues.push(e))
+    const pushInput = ()=>{
+        console.log(newVal,"message")
+        setNewArr(arrayValues.push(newVal))
+        console.log(arrayValues)
+        
         return(
             <Stack justifyContent='center' direction="row" divider={<Divider orientation="vertical" flexItem />} spacing={1} >
             <Stack direction='row'>
@@ -124,8 +131,9 @@ const Stacks = ()=>{
             alert("Stack is Empty")
         }
         else{
-            var lastElement = arrayValues[-1]
-            console.log(lastElement)
+             var lastElement = arrayValues[arrayValues.length -1]
+             alert(`Element at top of the Stack is ${lastElement}`)
+           // for(var i=0;i<=arrayValues.length)
         }
 
     }
@@ -164,7 +172,7 @@ const Stacks = ()=>{
                   <Button variant='contained' id='createId' onClick={onCreate}>
                     <NavigateNextIcon/>
                   </Button>
-                  <TextField variant='outlined' className={classes.textFeild} id='inputId' label='Enter value' size='small' type='number' error={invalidInput} onChange={pushInput}> </TextField>
+                  <TextField variant='outlined' className={classes.textFeild} id='inputId' label='Enter value' size='small' type='number' error={invalidInput} onChange={pushInputValue}> </TextField>
                   <Button variant='contained' id='createId' onClick={pushInput}>PUSH</Button>
                   <Button variant='contained' id='createId' onClick={popFunction}>POP</Button>
                   <Button variant='contained' id='createId' onClick={peekFunction}>PEEK</Button>

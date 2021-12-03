@@ -43,11 +43,11 @@ const Navbar = () => {
           className={classes.menuButton}
         >
         </IconButton>
-        <Typography id="boldText" className={classes.title}>
-          Data Structures Visualisation
-        </Typography>
+         <Typography id="boldText" className={classes.title}>
+        <Button href="/" color="secondary">Data Structures Visualisation</Button>
+        </Typography> 
 
-        <Button color='secondary' href="/">Home</Button>
+        <Button color='secondary' href="/Dslist">Home</Button>
         <Button color='secondary' href="#text-buttons">Documentation</Button>
         <Button color='secondary' href="#text-buttons">Contribute</Button>
         <Button color='secondary' href="#text-buttons">Code</Button>
