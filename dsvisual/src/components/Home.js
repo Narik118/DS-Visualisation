@@ -2,7 +2,6 @@ import {React, useEffect, useState} from 'react'
 import '../styles.css'
 import { Button, Grid, Card, CardMedia } from '@mui/material'
 import home from '../images/home.jpg'
-import { makeStyles, styled } from '@mui/styles';
 import NavigateNextIcon from '@mui/icons-material/NavigateNext';
 import { createMuiTheme, ThemeProvider } from '@mui/material';
 
