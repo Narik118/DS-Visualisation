@@ -24,12 +24,11 @@ const AlertNotify = (props)=>{
     }
     return(
         <div>
-        <Snackbar open={open} autoHideDuration={6000} onClose={handleClose}>
+        <Snackbar open={open} autoHideDuration={2000} onClose={handleClose}>
         <Alert onClose={handleClose} severity={props.obj.alertLevel} sx={{ width: '100%' }}>
           {props.obj.alertMess}
         </Alert>
       </Snackbar>
-      <Button onClick={justlog}>click me</Button>
           </div>
     )
 }
