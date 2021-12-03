@@ -33,23 +33,23 @@ const Stacks = ()=>{
 
     //Validations states
     const [invalidInput, setInvalidInput] = useState(false)
-    const [invalidArrayInput, setInvalidArrayInput] = useState(false)
+    const [invalidStackInput, setInvalidStackInput] = useState(false)
     const [helperMessage, setHelperMessage] = useState('Enter stack values 1,2,3,4')
 
 
     //state variables for actions
-    const [arraySize, setArraySize] = useState();
+    const [stackSize, setStackSize] = useState();
     const [tempVal, setTempVal] = useState();
-    const [arrayValues, setArrayValues] = useState([])
+    const [stackValues, setStackValues] = useState([])
     const values = []
 
 
     useEffect(()=>{
-        <CreateArray/>
-    },[arrayValues])
+        <CreateStack/>
+    },[stackValues])
 
-    const arraySizeInput = (e)=>{
-        setArraySize(e.target.value)
+    const stackSizeInput = (e)=>{
+        setStackSize(e.target.value)
     }
 
     const onCreate=()=>{
@@ -61,28 +61,28 @@ const Stacks = ()=>{
             for(var i=0;i<numb.length;i++){
                 values.push(numb[i])
             }
-                if(Number(arraySize) === values.length){
-                    setArrayValues(values)
+                if(Number(stackSize) === values.length){
+                    setStackValues(values)
                 }
                 else{
                     alert("Stack size is not equal to stack values")
                     setInvalidInput(true)
-                    setInvalidArrayInput(true)
+                    setInvalidStackInput(true)
                 }
         }
         else if(tempVal === undefined){
             alert("Empty stack")
         }
-        else if(arraySize > 10){
+        else if(stackSize > 10){
             setInvalidInput(true);
         }
 
 
     }
 
-    const arrayInput=(e)=>{
+    const stackInput=(e)=>{
         if(e.target.value.length > 19){
-            setInvalidArrayInput(true)
+            setInvalidStackInput(true)
         }
         else if(e.target.value.length>0){
             setTempVal(e.target.value);
@@ -90,11 +90,11 @@ const Stacks = ()=>{
 
     }
     const pushInputValue = (e)=>{
-        setNewArr(arrayValues.push(e.target.value))
+        setNewStk(stackValues.push(e.target.value))
         console.log("message 2")
     }
 
-    const [newArr, setNewArr] = useState()
+    const [newStk, setNewStk] = useState()
     //push function
     const pushInput = (e)=>{
         console.log(e.target.value,"message")
@@ -102,7 +102,7 @@ const Stacks = ()=>{
         return(
             <Stack justifyContent='center' direction="row" divider={<Divider orientation="vertical" flexItem />} spacing={1} >
             <Stack direction='row'>
-            {arrayValues.map(item=>(
+            {stackValues.map(item=>(
                 <Item id='itemId'>{item}</Item>
             ))}
             </Stack>
@@ -111,11 +111,11 @@ const Stacks = ()=>{
     }
     //pop function
     const popFunction=()=>{
-        setNewArr(arrayValues.pop())
+        setNewStk(stackValues.pop())
         return(
             <Stack justifyContent='center' direction="row" divider={<Divider orientation="vertical" flexItem />} spacing={1} >
             <Stack direction='row'>
-            {arrayValues.map(item=>(
+            {stackValues.map(item=>(
                 <Item id='itemId'>{item}</Item>
             ))}
             </Stack>
@@ -124,11 +124,11 @@ const Stacks = ()=>{
     }
     //peek function
     const peekFunction=()=>{
-        if(arrayValues.length == 0){
+        if(stackValues.length == 0){
             alert("Stack is Empty")
         }
         else{
-             var lastElement = arrayValues[arrayValues.length -1]
+             var lastElement = stackValues[stackValues.length -1]
              alert(`Element at top of the Stack is ${lastElement}`)
            // for(var i=0;i<=arrayValues.length)
         }
@@ -136,21 +136,21 @@ const Stacks = ()=>{
     }
     //Empty function
     const emptyFunction=()=>{
-        if(arrayValues.length == 0){
+        if(stackValues.length == 0){
             alert("Stack is Empty")
         }
-        else if(arrayValues.length != null){
-            console.log(arrayValues)
+        else if(stackValues.length != null){
+            console.log(stackValues)
             alert("Stack is Full")
         }
     }
 
 
-    const CreateArray=()=>{
+    const CreateStack=()=>{
         return(
         <Stack justifyContent='center' direction="row" divider={<Divider orientation="vertical" flexItem />} spacing={1} >
                 <Stack direction="column-reverse" className='outputSize'>
-                {arrayValues.map(item=>(
+                {stackValues.map(item=>(
                     <Item id='itemId'>{item}</Item>
                 ))}
                 </Stack>
@@ -164,8 +164,8 @@ const Stacks = ()=>{
         <Grid  direction='row' className='mainDiv' container >
             <Grid textAlign='left' className='inputClass'>
                 <Stack direction="row" spacing={3}>
-                  <TextField variant='outlined' className={classes.textFeild} id='inputId' label='Enter size' size='small' onChange={arraySizeInput} type='number' error={invalidInput} helperText='Enter value less than 10'> </TextField> 
-                  <TextField variant='outlined' id='inputId' label='Enter values' size='small' onChange={arrayInput} error={invalidArrayInput} helperText={helperMessage}> </TextField>
+                  <TextField variant='outlined' className={classes.textFeild} id='inputId' label='Enter size' size='small' onChange={stackSizeInput} type='number' error={invalidInput} helperText='Enter value less than 10'> </TextField> 
+                  <TextField variant='outlined' id='inputId' label='Enter values' size='small' onChange={stackInput} error={invalidStackInput} helperText={helperMessage}> </TextField>
                   <Button variant='contained' id='createId' onClick={onCreate}>
                     <NavigateNextIcon/>
                   </Button>
@@ -173,10 +173,10 @@ const Stacks = ()=>{
                   <Button variant='contained' id='createId' onClick={pushInput}>PUSH</Button>
                   <Button variant='contained' id='createId' onClick={popFunction}>POP</Button>
                   <Button variant='contained' id='createId' onClick={peekFunction}>PEEK</Button>
-                  <Button variant='contained' id='createId' onClick={emptyFunction}>Is Empty</Button>
+                  <Button variant='contained' id='createId' onClick={emptyFunction}>Empty</Button>
                 </Stack>
             </Grid>
-                <CreateArray/>
+                <CreateStack/>
         </Grid>
         </ThemeProvider>
         </div>
