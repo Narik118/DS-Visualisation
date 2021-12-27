@@ -1,9 +1,13 @@
 import { Button, Card, CardActions, CardMedia, CardContent, Grid, Typography } from '@mui/material';
 import React from 'react' 
-import arr from '../images/arrayDS.jpg'
 import { createMuiTheme, ThemeProvider } from '@mui/material';
 import '../styles.css'
-import stackImg from '../images/stackImg.jpg'
+import arr from '../images/Array.png'
+import stackImg from '../images/Stack.png'
+import bstImg from '../images/BST.png'
+import graphImg from '../images/graph.png'
+import LinkedlistImg from '../images/Linkedlist.png'
+import queueImg from '../images/queue.png'
 import Bounce from 'react-reveal/Bounce';
 
 
@@ -91,7 +95,7 @@ const LandingPage = ()=>{
                 <CardMedia
                     component="img"
                     height="150"
-                    image={arr}
+                    image={queueImg}
                     alt="array imgage"
                     sx={{
                         objectFit:'fill'
@@ -118,7 +122,7 @@ const LandingPage = ()=>{
                 <CardMedia
                     component="img"
                     height="150"
-                    image={arr}
+                    image={bstImg}
                     alt="array imgage"
                     sx={{
                         objectFit:'fill'
@@ -145,7 +149,7 @@ const LandingPage = ()=>{
                 <CardMedia 
                     component="img"
                     height="150"
-                    image={arr}
+                    image={LinkedlistImg}
                     alt="array imgage"
                     sx={{
                         objectFit:'fill'
@@ -172,7 +176,7 @@ const LandingPage = ()=>{
                 <CardMedia 
                     component="img"
                     height="150"
-                    image={arr}
+                    image={graphImg}
                     alt="array imgage"
                     sx={{
                         objectFit:'fill'
