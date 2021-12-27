@@ -40,13 +40,16 @@ const Stacks = ()=>{
     //state variables for actions
     const [stackSize, setStackSize] = useState();
     const [tempVal, setTempVal] = useState();
-    const [stackValues, setStackValues] = useState([])
+    const [stackValues, setStackValues] = useState([]);
+    const [emptyStk, setStackValues2] = useState([]);
     const [newVal, setNewVal] = useState();
     const values = []
+    var values2 = []
 
 
     useEffect(()=>{
         <CreateStack/>
+        console.log(emptyStk)
     },[stackValues])
 
     const stackSizeInput = (e)=>{
@@ -66,6 +69,7 @@ const Stacks = ()=>{
         }
         else if(tempVal === undefined){
             alert("Stack created of size:"+ stackSize)
+            newStack()
         }
         else if(stackSize > 10){
             setInvalidInput(true);
@@ -82,6 +86,25 @@ const Stacks = ()=>{
         }
 
     }
+    //Function to create an empty stack
+    const newStack=()=>{         
+        for(var i=0;i<stackSize;i++){
+             values2.push(1)
+         }     
+         setStackValues2(values2)
+        console.log(emptyStk)  
+        return(
+            <Stack justifyContent='center' direction="row" divider={<Divider orientation="vertical" flexItem />} spacing={1} >
+            <Stack direction='row'>
+            {emptyStk.map(item=>(
+                <Item id='itemId'>{item}</Item>
+            ))}
+            </Stack>
+        </Stack>
+        )
+    }
+
+    
     const pushInputValue = (e)=>{
         setNewVal(e.target.value)
         console.log("message 2")
@@ -93,12 +116,16 @@ const Stacks = ()=>{
         if(stackValues.length < stackSize){
         console.log(newVal,"message")
         setNewStk(stackValues.push(newVal))
+        emptyStk.pop()
         console.log(stackValues)
+        console.log(emptyStk)
+        const newstk = stackValues.concat(emptyStk)
+        console.log(newstk)
         
         return(
             <Stack justifyContent='center' direction="row" divider={<Divider orientation="vertical" flexItem />} spacing={1} >
             <Stack direction='row'>
-            {stackValues.map(item=>(
+            {newstk.map(item=>(
                 <Item id='itemId'>{item}</Item>
             ))}
             </Stack>
@@ -112,6 +139,9 @@ const Stacks = ()=>{
     //pop function
     const popFunction=()=>{
         setNewStk(stackValues.pop())
+        emptyStk.push('-')
+        console.log(stackValues)
+        console.log(emptyStk)
         return(
             <Stack justifyContent='center' direction="row" divider={<Divider orientation="vertical" flexItem />} spacing={1} >
             <Stack direction='row'>
@@ -182,4 +212,4 @@ const Stacks = ()=>{
     )
 }
 
-export default Stacks; 
+export default Stacks;
