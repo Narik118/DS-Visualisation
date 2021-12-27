@@ -62,22 +62,14 @@ const Stacks = ()=>{
             for(var i=0;i<numb.length;i++){
                 values.push(numb[i])
             }
-                if(Number(stackSize) === values.length){
-                    setStackValues(values)
-                }
-                else{
-                    alert("Stack size is not equal to stack values")
-                    setInvalidInput(true)
-                    setInvalidStackInput(true)
-                }
+            setStackValues(values)
         }
         else if(tempVal === undefined){
-            alert("Empty stack")
+            alert("Stack created of size:"+ stackSize)
         }
         else if(stackSize > 10){
             setInvalidInput(true);
         }
-
 
     }
 
@@ -98,9 +90,10 @@ const Stacks = ()=>{
     const [newStk, setNewStk] = useState()
     //push function
     const pushInput = ()=>{
+        if(stackValues.length < stackSize){
         console.log(newVal,"message")
-        setNewArr(arrayValues.push(newVal))
-        console.log(arrayValues)
+        setNewStk(stackValues.push(newVal))
+        console.log(stackValues)
         
         return(
             <Stack justifyContent='center' direction="row" divider={<Divider orientation="vertical" flexItem />} spacing={1} >
@@ -111,6 +104,10 @@ const Stacks = ()=>{
             </Stack>
         </Stack>
         )
+        }
+        else{
+            alert("Stack is full")
+        }
     }
     //pop function
     const popFunction=()=>{
@@ -167,8 +164,7 @@ const Stacks = ()=>{
         <Grid  direction='row' className='mainDiv' container >
             <Grid textAlign='left' className='inputClass'>
                 <Stack direction="row" spacing={3}>
-                  <TextField variant='outlined' className={classes.textFeild} id='inputId' label='Enter size' size='small' onChange={stackSizeInput} type='number' error={invalidInput} helperText='Enter value less than 10'> </TextField> 
-                  <TextField variant='outlined' id='inputId' label='Enter values' size='small' onChange={stackInput} error={invalidStackInput} helperText={helperMessage}> </TextField>
+                  <TextField variant='outlined' className={classes.textFeild} id='inputId' label='Enter size' size='small' onChange={stackSizeInput} type='number' error={invalidInput} helperText='Enter value less than 10'> </TextField>
                   <Button variant='contained' id='createId' onClick={onCreate}>
                     <NavigateNextIcon/>
                   </Button>
