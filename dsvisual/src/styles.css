@@ -14,15 +14,18 @@ body{
 }
 
 #inputId{
-    width:150px;
     color: '#f6f6f6' !important;
 }
 
 .inputClass{
-    margin-bottom: 15px;
-    margin-left: 15px;
+    padding: 15px 100px;
+    justify-content: center;
 }
 
+.inputDiv{
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
 #createId{
     height: 38px;
     margin-left: 3px;
@@ -56,7 +59,7 @@ body{
     color: white;
 }
 .textSize{
-    font-size: 75px;
+    margin-left: 25px !important;
 }
 .homeAdjust{
     margin-top: 15px;
@@ -64,9 +67,7 @@ body{
 }
 
 /* Array component */
-.functionsDiv{
-    display: grid;
-}
+
 
 /* Home page */
 .scroll-bg{
@@ -99,99 +100,40 @@ body{
     color: white !important;
 }
 
-/* contribute component */
-.wrapper{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 18vh;
-    
-}
-
-.wrapper .card{
-    background: white;
-    width: 430px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 20px;
-    pointer-events: none;
-    position: absolute;
-    border-radius: 100px 20px 20px 100px;
-    animation: animate 15s infinite;
-    margin-top: 120px;
-    margin-bottom: 25px;
+/*annimation on Home */
+.textSize span:before{
+    content: '';
+    animation: animate infinite 9s;
 }
 @keyframes animate{
     0%{
-        opacity: 2;
-        transform: translateY(20%) scale(0.4);
-
+        content: 'Array';
+        color: #E9A6A6;
     }
-      25%{
-        opacity: 1;
-        pointer-events: auto;
-        transform: translateY(20%) scale(1);
-
+    20%{
+        content: 'Stack';
+        color: #FA7D09;
+    }
+    40%{
+        content: 'Queue';
+        color: #C6FFDD;
+    }
+    60%{
+        content: 'Linked list';
+        color: #FBD786;
+    }
+    80%{
+        content: 'BST';
+        color: #f7797d;
+    }
+    100%{
+        content: 'Graph';
+        color: #D89216;
     }
 }
-.card .content {
-    display: flex;
-    align-items: center ;
-}
 
-.wrapper .card .img{
-    height: 90px;
-    width: 90px;
-    position: absolute;
-    left: -5px;
-    background: white;
-    border-radius: 50%;
-    padding: 5px;
-    box-shadow: 0px 0px 5px rgba(0, 0, 0,2) ;
-}
+.allInputsGrid{
+    padding: 10% 20%;
+    min-height: 250px;
 
-.card .img img{
-    height:100%;
-    width: 100%;
-    border-radius: 50%;
-    object-fit: cover;
-}
-
-.card .details{
-    margin-left: 80px;
-}
-
-.details span{
-    font-weight: 600;
-    font-size: 18px;
-}
-
-.card a{
-    text-decoration: none;
-    padding: 7px 18px;
-    border-radius: 25px;
-    color: #fff; 
-    background: linear-gradient(to bottom, #bea2e7 0%, #86b7e7 100%) ;
-}
-
-.fontSize{
-    font-size: 75px;
-    text-decoration:none;
-    color: white;
-}
-
-.contrAdjust{
-    margin-top: 15px;
-    margin-bottom: 15px;
-    color: white;
-    justify-content: right;
-    /* padding-left: 55%; */
-}
-
-
-/* Linkedlist component */
-.fontsize{
-    font-size: 70px;
-    color: #fff;
 }
