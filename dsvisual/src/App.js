@@ -10,6 +10,8 @@ import Home from './components/Home'
 import Zoom from 'react-reveal/Zoom';
 import Fade from 'react-reveal/Fade';
 import Bounce from 'react-reveal/Bounce';
+import Contribute from './components/Contribute'
+import Linkedlist from './components/Linkedlist'
 
 function App() {
 
@@ -24,6 +26,8 @@ function App() {
       <Route path='Stack' element={<Stack/>}></Route>
       <Route path='Array' element={<Array/>}></Route>
       <Route path='BST' element={<BST/>}></Route>
+     <Route path='Contribute' element={<Contribute/>}></Route>
+     <Route path="Linkedlist" element={<Linkedlist/>}></Route>
       </Routes>
       </Fade>
     </div>

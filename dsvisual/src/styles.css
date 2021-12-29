@@ -68,10 +68,130 @@ body{
     display: grid;
 }
 
+/* Home page */
+.scroll-bg{
+    background: white !important;
+    /* margin: 10% auto; */
+    /* width: 600px; */
+     padding: 10ps 15px; 
+    /* border-radius: 50px; */
+}
+
+.scroll-div{
+    width: 700px;
+    height: 600px;
+    overflow: hidden;
+    overflow-y: scroll;
+}
+
+.scroll-object{
+    font-size: 15px;
+     padding: 20px;
+}
+
+
+
 /* Material UI default */
 .css-k4qjio-MuiFormHelperText-root{
     color:white !important; 
 }
 .css-1n4twyu-MuiInputBase-input-MuiOutlinedInput-input{
     color: white !important;
+}
+
+/* contribute component */
+.wrapper{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 18vh;
+    
+}
+
+.wrapper .card{
+    background: white;
+    width: 430px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+    pointer-events: none;
+    position: absolute;
+    border-radius: 100px 20px 20px 100px;
+    animation: animate 15s infinite;
+    margin-top: 120px;
+    margin-bottom: 25px;
+}
+@keyframes animate{
+    0%{
+        opacity: 2;
+        transform: translateY(20%) scale(0.4);
+
+    }
+      25%{
+        opacity: 1;
+        pointer-events: auto;
+        transform: translateY(20%) scale(1);
+
+    }
+}
+.card .content {
+    display: flex;
+    align-items: center ;
+}
+
+.wrapper .card .img{
+    height: 90px;
+    width: 90px;
+    position: absolute;
+    left: -5px;
+    background: white;
+    border-radius: 50%;
+    padding: 5px;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0,2) ;
+}
+
+.card .img img{
+    height:100%;
+    width: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.card .details{
+    margin-left: 80px;
+}
+
+.details span{
+    font-weight: 600;
+    font-size: 18px;
+}
+
+.card a{
+    text-decoration: none;
+    padding: 7px 18px;
+    border-radius: 25px;
+    color: #fff; 
+    background: linear-gradient(to bottom, #bea2e7 0%, #86b7e7 100%) ;
+}
+
+.fontSize{
+    font-size: 75px;
+    text-decoration:none;
+    color: white;
+}
+
+.contrAdjust{
+    margin-top: 15px;
+    margin-bottom: 15px;
+    color: white;
+    justify-content: right;
+    /* padding-left: 55%; */
+}
+
+
+/* Linkedlist component */
+.fontsize{
+    font-size: 70px;
+    color: #fff;
 }
