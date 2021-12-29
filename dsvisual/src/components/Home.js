@@ -1,13 +1,8 @@
 import {React, useEffect, useState} from 'react'
 import '../styles.css'
-<<<<<<< HEAD
 import { Button, Grid, Card, CardMedia, Typography } from '@mui/material'
 import home from '../images/Array.png'
 import { makeStyles, styled } from '@mui/styles';
-=======
-import { Button, Grid, Card, CardMedia } from '@mui/material'
-import home from '../images/home.jpg'
->>>>>>> 61015c70c06e319b7e89652e9fe23695c3fd3a1a
 import NavigateNextIcon from '@mui/icons-material/NavigateNext';
 import { createMuiTheme, ThemeProvider } from '@mui/material';
 
