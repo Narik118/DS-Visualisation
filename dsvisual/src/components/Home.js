@@ -2,8 +2,15 @@ import {React, useEffect, useState} from 'react'
 import '../styles.css'
 import { Button, Grid, Card, CardMedia, Typography } from '@mui/material'
 import home from '../images/Array.png'
+// import { makeStyles, styled } from '@mui/styles';
+// import { Button, Grid, Card, CardMedia } from '@mui/material'
+// import home from '../images/home.jpg'
 import { makeStyles, styled } from '@mui/styles';
+<<<<<<< HEAD
 import NavigateNextIcon from '@mui/icons-material/NavigateNext';
+=======
+// import NavigateNextIcon from '@mui/icons-material/NavigateNext';
+>>>>>>> da626485f1fc2de4e3763c9098688f3c744b1ff0
 import { createMuiTheme, ThemeProvider } from '@mui/material';
 
 const theme =  createMuiTheme({
@@ -37,15 +44,145 @@ const Home = () =>{
                 </Grid>
                 <Grid item xs={12} sm={6}>
                     <Card>
-                       <CardMedia 
-                         component="img"
-                         height="350"
-                         image={home}
-                         alt="Home imgage"
-                         sx={{
-                         objectFit:'fill'
-                         }}
-                        />
+                        <div className='scroll-bg'>
+                            <div className='scroll-div'>
+                                <div className='scroll-object'>
+                                    //pop function<br></br>
+                                    const fruits =["Banana","Orange","Apple","Mango"];
+                                    fruis.pop();<br></br>
+
+                                    //push function<br></br>
+                                    const fruits =["Banana","Orange","Apple","Mango"];
+                                    fruits.push("Kiwi");<br></br>
+
+                                    //print the list items<br></br>
+                                    printList() 
+                                    
+                                    var curr=this.head;
+                                    var str='''';
+                                    curr=curr.next;
+                                    
+                                    console.log(str);
+
+
+                                    //pop function<br></br>
+                                    const fruits =["Banana","Orange","Apple","Mango"];
+                                    fruis.pop();<br></br>
+
+                                    //push function<br></br>
+                                    const fruits =["Banana","Orange","Apple","Mango"];
+                                    fruits.push("Kiwi");<br></br>
+
+                                    //pop function<br></br>
+                                    const fruits =["Banana","Orange","Apple","Mango"];
+                                    fruis.pop();<br></br>
+
+                                    //push function<br></br>
+                                    const fruits =["Banana","Orange","Apple","Mango"];
+                                    fruits.push("Kiwi");<br></br>
+
+                                    //pop function<br></br>
+                                    const fruits =["Banana","Orange","Apple","Mango"];
+                                    fruis.pop();<br></br>
+
+                                    //push function<br></br>
+                                    const fruits =["Banana","Orange","Apple","Mango"];
+                                    fruits.push("Kiwi");<br></br>
+
+                                    //pop function<br></br>
+                                    const fruits =["Banana","Orange","Apple","Mango"];
+                                    fruis.pop();<br></br>
+
+                                    //push function<br></br>
+                                    const fruits =["Banana","Orange","Apple","Mango"];
+                                    fruits.push("Kiwi");<br></br>
+
+                                    //pop function<br></br>
+                                    const fruits =["Banana","Orange","Apple","Mango"];
+                                    fruis.pop();<br></br>
+
+                                    //push function<br></br>
+                                    const fruits =["Banana","Orange","Apple","Mango"];
+                                    fruits.push("Kiwi");<br></br>
+
+                                    //pop function<br></br>
+                                    const fruits =["Banana","Orange","Apple","Mango"];
+                                    fruis.pop();<br></br>
+
+                                    //push function<br></br>
+                                    const fruits =["Banana","Orange","Apple","Mango"];
+                                    fruits.push("Kiwi");<br></br>
+
+                                    //pop function<br></br>
+                                    const fruits =["Banana","Orange","Apple","Mango"];
+                                    fruis.pop();<br></br>
+
+                                    //push function<br></br>
+                                    const fruits =["Banana","Orange","Apple","Mango"];
+                                    fruits.push("Kiwi");<br></br>
+
+                                    //pop function<br></br>
+                                    const fruits =["Banana","Orange","Apple","Mango"];
+                                    fruis.pop();<br></br>
+
+                                    //push function<br></br>
+                                    const fruits =["Banana","Orange","Apple","Mango"];
+                                    fruits.push("Kiwi");<br></br>
+                                    
+
+                                    
+                                    //pop function<br></br>
+                                    const fruits =["Banana","Orange","Apple","Mango"];
+                                    fruis.pop();<br></br>
+
+                                    //push function<br></br>
+                                    const fruits =["Banana","Orange","Apple","Mango"];
+                                    fruits.push("Kiwi");<br></br>
+
+                                    //pop function<br></br>
+                                    const fruits =["Banana","Orange","Apple","Mango"];
+                                    fruis.pop();<br></br>
+
+                                    //push function<br></br>
+                                    const fruits =["Banana","Orange","Apple","Mango"];
+                                    fruits.push("Kiwi");<br></br>
+
+                                    //pop function<br></br>
+                                    const fruits =["Banana","Orange","Apple","Mango"];
+                                    fruis.pop();<br></br>
+
+                                    //push function<br></br>
+                                    const fruits =["Banana","Orange","Apple","Mango"];
+                                    fruits.push("Kiwi");<br></br>
+                                    
+                                    //pop function<br></br>
+                                    const fruits =["Banana","Orange","Apple","Mango"];
+                                    fruis.pop();<br></br>
+
+                                    //push function<br></br>
+                                    const fruits =["Banana","Orange","Apple","Mango"];
+                                    fruits.push("Kiwi");<br></br>
+
+                                    //pop function<br></br>
+                                    const fruits =["Banana","Orange","Apple","Mango"];
+                                    fruis.pop();<br></br>
+
+                                    //push function<br></br>
+                                    const fruits =["Banana","Orange","Apple","Mango"];
+                                    fruits.push("Kiwi");<br></br>
+
+                                    //pop function<br></br>
+                                    const fruits =["Banana","Orange","Apple","Mango"];
+                                    fruis.pop();<br></br>
+
+                                    //push function<br></br>
+                                    const fruits =["Banana","Orange","Apple","Mango"];
+                                    fruits.push("Kiwi");<br></br>
+
+
+                                </div>
+                            </div>
+                        </div>
                     </Card>
                 </Grid>
             </Grid>

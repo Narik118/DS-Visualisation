@@ -69,6 +69,29 @@ body{
 /* Array component */
 
 
+/* Home page */
+.scroll-bg{
+    background: white !important;
+    /* margin: 10% auto; */
+    /* width: 600px; */
+     padding: 10ps 15px; 
+    /* border-radius: 50px; */
+}
+
+.scroll-div{
+    width: 700px;
+    height: 600px;
+    overflow: hidden;
+    overflow-y: scroll;
+}
+
+.scroll-object{
+    font-size: 15px;
+     padding: 20px;
+}
+
+
+
 /* Material UI default */
 .css-k4qjio-MuiFormHelperText-root{
     color:white !important; 

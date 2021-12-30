@@ -49,7 +49,7 @@ const Navbar = () => {
 
         <Button color='secondary' href="/Dslist">Home</Button>
         <Button color='secondary' href="#text-buttons">Documentation</Button>
-        <Button color='secondary' href="#text-buttons">Contribute</Button>
+        <Button color='secondary' href="/Contribute">Contribute</Button>
         <Button color='secondary' href="#text-buttons">Code</Button>
 
       </Toolbar>

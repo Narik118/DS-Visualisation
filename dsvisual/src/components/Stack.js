@@ -191,23 +191,35 @@ const Stacks = ()=>{
     return(
         <div>
             <ThemeProvider theme={theme}>
-        <Grid  direction='row' className='mainDiv' container >
-            <Grid textAlign='left' className='inputClass'>
-                <Stack direction="row" spacing={3}>
-                  <TextField variant='outlined' className={classes.textFeild} id='inputId' label='Enter size' size='small' onChange={stackSizeInput} type='number' error={invalidInput} helperText='Enter value less than 10'> </TextField>
-                  <Button variant='contained' id='createId' onClick={onCreate}>
-                    <NavigateNextIcon/>
-                  </Button>
-                  <TextField variant='outlined' className={classes.textFeild} id='inputId' label='Enter value' size='small' type='number' error={invalidInput} onChange={pushInputValue}> </TextField>
-                  <Button variant='contained' id='createId' onClick={pushInput}>PUSH</Button>
-                  <Button variant='contained' id='createId' onClick={popFunction}>POP</Button>
-                  <Button variant='contained' id='createId' onClick={peekFunction}>PEEK</Button>
-                  <Button variant='contained' id='createId' onClick={emptyFunction}>Empty</Button>
-                </Stack>
-            </Grid>
-                <CreateStack/>
-        </Grid>
-        </ThemeProvider>
+                <Grid container spacing={1} direction="column">
+                  <Grid item xs={6}>
+                     <Grid  direction='row' className='mainDiv' container >
+                        <Grid textAlign='left' className='inputClass'>
+                           <Stack direction="row" spacing={3}>
+                              <TextField variant='outlined' className={classes.textFeild} id='inputId' label='Enter size' size='small' onChange={stackSizeInput} type='number' error={invalidInput} helperText='Enter value less than 10'> </TextField>
+                              <Button variant='contained' id='createId' onClick={onCreate}>
+                                <NavigateNextIcon/>
+                              </Button>
+                           </Stack>
+                        </Grid>
+                     </Grid>
+                  </Grid>
+                  <Grid item xs={6}>
+                      <Grid  direction='row' className='mainDiv' container >
+                          <Grid textAlign='left' className='inputClass'>
+                              <Stack spacing={1.5}>
+                                 <TextField variant='outlined' className={classes.textFeild} id='inputId' label='Enter value' size='small' type='number' error={invalidInput} onChange={pushInputValue}> </TextField>
+                                 <Button variant='contained' id='createId' onClick={pushInput}>PUSH</Button>
+                                 <Button variant='contained' id='createId' onClick={popFunction}>POP</Button>
+                                 <Button variant='contained' id='createId' onClick={peekFunction}>PEEK</Button>
+                                 <Button variant='contained' id='createId' onClick={emptyFunction}>Empty</Button>
+                              </Stack>
+                          </Grid>
+                      </Grid>
+                  </Grid>
+                  <CreateStack/>
+                </Grid>
+            </ThemeProvider>
         </div>
     )
 }
