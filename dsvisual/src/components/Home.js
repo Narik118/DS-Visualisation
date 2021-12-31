@@ -6,11 +6,7 @@ import home from '../images/Array.png'
 // import { Button, Grid, Card, CardMedia } from '@mui/material'
 // import home from '../images/home.jpg'
 import { makeStyles, styled } from '@mui/styles';
-<<<<<<< HEAD
 import NavigateNextIcon from '@mui/icons-material/NavigateNext';
-=======
-// import NavigateNextIcon from '@mui/icons-material/NavigateNext';
->>>>>>> da626485f1fc2de4e3763c9098688f3c744b1ff0
 import { createMuiTheme, ThemeProvider } from '@mui/material';
 
 const theme =  createMuiTheme({
