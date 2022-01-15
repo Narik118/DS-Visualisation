@@ -123,7 +123,7 @@ const Stacks = ()=>{
         console.log(newstk)
         
         return(
-            <Stack justifyContent='center' direction="row" divider={<Divider orientation="vertical" flexItem />} spacing={1} >
+            <Stack justifyContent='right' direction="row" divider={<Divider orientation="vertical" flexItem />} spacing={1} >
             <Stack direction='row'>
             {newstk.map(item=>(
                 <Item id='itemId'>{item}</Item>

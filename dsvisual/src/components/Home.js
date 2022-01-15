@@ -40,145 +40,43 @@ const Home = () =>{
                 </Grid>
                 <Grid item xs={12} sm={6}>
                     <Card>
+                        <main>
                         <div className='scroll-bg'>
                             <div className='scroll-div'>
                                 <div className='scroll-object'>
-                                    //pop function<br></br>
+                                  <p className='cmmt'> //pop function</p><br></br>
+                                   <p className='stat'> const fruits =["Banana","Orange","Apple","Mango"];</p><br></br>
+                                    fruis.pop();<br></br>
+
+                                    <p className='cmmt'> //push function</p><br></br>
+                                    const fruits =["Banana","Orange","Apple","Mango"];<br></br>
+                                    fruits.push("Kiwi");<br></br>
+
+                                    <p className='cmmt'> //print the list items</p><br></br>
+                                    printList() <br></br>
+                                    var curr=this.head;<br></br>
+                                    var str='''';<br></br>
+                                    curr=curr.next;  <br></br>                                  
+                                    console.log(str);<br></br>
+
+
+                                    <p className='cmmt'> //pop function</p><br></br>
                                     const fruits =["Banana","Orange","Apple","Mango"];
                                     fruis.pop();<br></br>
 
-                                    //push function<br></br>
+                                   <p className='cmmt'> //push function</p><br></br>
                                     const fruits =["Banana","Orange","Apple","Mango"];
                                     fruits.push("Kiwi");<br></br>
 
-                                    //print the list items<br></br>
-                                    printList() 
-                                    
-                                    var curr=this.head;
-                                    var str='''';
-                                    curr=curr.next;
-                                    
-                                    console.log(str);
-
-
-                                    //pop function<br></br>
+                                   <p className='cmmt'> //pop function</p><br></br>
                                     const fruits =["Banana","Orange","Apple","Mango"];
                                     fruis.pop();<br></br>
-
-                                    //push function<br></br>
-                                    const fruits =["Banana","Orange","Apple","Mango"];
-                                    fruits.push("Kiwi");<br></br>
-
-                                    //pop function<br></br>
-                                    const fruits =["Banana","Orange","Apple","Mango"];
-                                    fruis.pop();<br></br>
-
-                                    //push function<br></br>
-                                    const fruits =["Banana","Orange","Apple","Mango"];
-                                    fruits.push("Kiwi");<br></br>
-
-                                    //pop function<br></br>
-                                    const fruits =["Banana","Orange","Apple","Mango"];
-                                    fruis.pop();<br></br>
-
-                                    //push function<br></br>
-                                    const fruits =["Banana","Orange","Apple","Mango"];
-                                    fruits.push("Kiwi");<br></br>
-
-                                    //pop function<br></br>
-                                    const fruits =["Banana","Orange","Apple","Mango"];
-                                    fruis.pop();<br></br>
-
-                                    //push function<br></br>
-                                    const fruits =["Banana","Orange","Apple","Mango"];
-                                    fruits.push("Kiwi");<br></br>
-
-                                    //pop function<br></br>
-                                    const fruits =["Banana","Orange","Apple","Mango"];
-                                    fruis.pop();<br></br>
-
-                                    //push function<br></br>
-                                    const fruits =["Banana","Orange","Apple","Mango"];
-                                    fruits.push("Kiwi");<br></br>
-
-                                    //pop function<br></br>
-                                    const fruits =["Banana","Orange","Apple","Mango"];
-                                    fruis.pop();<br></br>
-
-                                    //push function<br></br>
-                                    const fruits =["Banana","Orange","Apple","Mango"];
-                                    fruits.push("Kiwi");<br></br>
-
-                                    //pop function<br></br>
-                                    const fruits =["Banana","Orange","Apple","Mango"];
-                                    fruis.pop();<br></br>
-
-                                    //push function<br></br>
-                                    const fruits =["Banana","Orange","Apple","Mango"];
-                                    fruits.push("Kiwi");<br></br>
-
-                                    //pop function<br></br>
-                                    const fruits =["Banana","Orange","Apple","Mango"];
-                                    fruis.pop();<br></br>
-
-                                    //push function<br></br>
-                                    const fruits =["Banana","Orange","Apple","Mango"];
-                                    fruits.push("Kiwi");<br></br>
-                                    
 
                                     
-                                    //pop function<br></br>
-                                    const fruits =["Banana","Orange","Apple","Mango"];
-                                    fruis.pop();<br></br>
-
-                                    //push function<br></br>
-                                    const fruits =["Banana","Orange","Apple","Mango"];
-                                    fruits.push("Kiwi");<br></br>
-
-                                    //pop function<br></br>
-                                    const fruits =["Banana","Orange","Apple","Mango"];
-                                    fruis.pop();<br></br>
-
-                                    //push function<br></br>
-                                    const fruits =["Banana","Orange","Apple","Mango"];
-                                    fruits.push("Kiwi");<br></br>
-
-                                    //pop function<br></br>
-                                    const fruits =["Banana","Orange","Apple","Mango"];
-                                    fruis.pop();<br></br>
-
-                                    //push function<br></br>
-                                    const fruits =["Banana","Orange","Apple","Mango"];
-                                    fruits.push("Kiwi");<br></br>
-                                    
-                                    //pop function<br></br>
-                                    const fruits =["Banana","Orange","Apple","Mango"];
-                                    fruis.pop();<br></br>
-
-                                    //push function<br></br>
-                                    const fruits =["Banana","Orange","Apple","Mango"];
-                                    fruits.push("Kiwi");<br></br>
-
-                                    //pop function<br></br>
-                                    const fruits =["Banana","Orange","Apple","Mango"];
-                                    fruis.pop();<br></br>
-
-                                    //push function<br></br>
-                                    const fruits =["Banana","Orange","Apple","Mango"];
-                                    fruits.push("Kiwi");<br></br>
-
-                                    //pop function<br></br>
-                                    const fruits =["Banana","Orange","Apple","Mango"];
-                                    fruis.pop();<br></br>
-
-                                    //push function<br></br>
-                                    const fruits =["Banana","Orange","Apple","Mango"];
-                                    fruits.push("Kiwi");<br></br>
-
-
                                 </div>
                             </div>
                         </div>
+                                    </main>
                     </Card>
                 </Grid>
             </Grid>

@@ -91,7 +91,7 @@ const Queues = ()=>{
         for(var i=0;i<queueSize;i++){
              values2.push(1)
          }     
-         setQueueValues2(values2)
+         setSQueueValues2(values2)
         console.log(emptyQue)  
         return(
             <Stack justifyContent='center' direction="row" divider={<Divider orientation="vertical" flexItem />} spacing={1} >
@@ -196,7 +196,7 @@ const Queues = ()=>{
                      <Grid  direction='row' className='mainDiv' container >
                         <Grid textAlign='left' className='inputClass'>
                            <Stack direction="row" spacing={3}>
-                              <TextField variant='outlined' className={classes.textFeild} id='inputId' label='Enter size' size='small' onChange={stackSizeInput} type='number' error={invalidInput} helperText='Enter value less than 10'> </TextField>
+                              <TextField variant='outlined' className={classes.textFeild} id='inputId' label='Enter size' size='small' onChange={queueSizeInput} type='number' error={invalidInput} helperText='Enter value less than 10'> </TextField>
                               <Button variant='contained' id='createId' onClick={onCreate}>
                                 <NavigateNextIcon/>
                               </Button>
@@ -220,7 +220,7 @@ const Queues = ()=>{
                           </Grid>
                       </Grid>
                   </Grid>
-                  <CreateStack/>
+                  <CreateQueue/>
                 </Grid>
             </ThemeProvider>
         </div>

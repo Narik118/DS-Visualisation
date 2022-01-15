@@ -12,6 +12,7 @@ import Fade from 'react-reveal/Fade';
 import Bounce from 'react-reveal/Bounce';
 import Contribute from './components/Contribute'
 import Linkedlist from './components/Linkedlist'
+import Queue from './components/Queue'
 
 function App() {
 
@@ -28,6 +29,7 @@ function App() {
       <Route path='BST' element={<BST/>}></Route>
      <Route path='Contribute' element={<Contribute/>}></Route>
      <Route path="Linkedlist" element={<Linkedlist/>}></Route>
+     <Route path="Queue" element={<Queue/>}></Route>
       </Routes>
       </Fade>
     </div>

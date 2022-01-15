@@ -1,8 +1,9 @@
 import {React, useEffect, useState} from 'react' 
-import '../styles.css'
+import '../styles.css';
 import { Grid, Stack, Divider, Paper, TextField, Button, styled } from '@mui/material'
  import { createMuiTheme, ThemeProvider,} from '@mui/material';
-import { BinarySearchTree, useTree } from 'react-tree-vis'
+import { BinarySearchTree, useTree } from 'react-tree-vis';
+import NavigateNextIcon from '@mui/icons-material/NavigateNext';
    //import AlertNotify from './Alert';
 const theme =  createMuiTheme({
   palette:{
@@ -86,18 +87,26 @@ const deletedata=()=>{
      <>
      <div>
      <ThemeProvider theme={theme}>
-     <Grid  direction='row' className='mainDiv' container spacing={2}>
-            <Grid textAlign='left' className='inputClass'>
-      <TextField onChange={takeInputHandler} focused variant='outlined'  label='Insert' size='small' type='number' id='inputdata'> </TextField>
-                  <Button variant='contained' id='insertData' onClick={insertbtn}>Go</Button>&nbsp;&nbsp;
+     <Grid container>
+        <Grid item xs={12} md={6}>
+        <Grid container direction='column'>
+        <Grid item direction='column'>
+            <Grid container direction='column' className='AllInputsGrid'>
+    
+                 <TextField onChange={takeInputHandler} focused variant='outlined'  label='Insert' size='small' type='number' id='inputdata'> </TextField>
+                  <Button  variant='contained' id='insertData' onClick={insertbtn}>
+                    Create BST<NavigateNextIcon /></Button><br></br>
                   <TextField onChange={takeInputHandler}  focused variant='outlined'  label='Remove' size='small' type='number' id='inputdata'> </TextField>
-                  <Button variant='contained' id='insertData' onClick={deletedata}>go</Button>
+                  <Button variant='contained' id='insertData' onClick={deletedata}>Remove Node<NavigateNextIcon /></Button>
                   <Createdmy />
                   </Grid>  
+                  </Grid></Grid></Grid>
+                  
                {/* BST display */}       
                <Grid justifyContent='right'>      
                   <BinarySearchTree data={[]} ref={ref} remove={remove} /></Grid>
-                     </Grid></ThemeProvider></div>                    
+                     </Grid></ThemeProvider></div>
+                                       
      </>
 
    );
