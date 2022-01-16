@@ -2,6 +2,8 @@ import {React, useEffect, useState} from 'react'
 import '../styles.css'
 import { Button, Grid, Card, CardMedia, Typography } from '@mui/material'
 import home from '../images/Array.png'
+import Bstfun from '../images/Bstfun.png'
+import Stackfun from '../images/Stackfun.png'
 // import { makeStyles, styled } from '@mui/styles';
 // import { Button, Grid, Card, CardMedia } from '@mui/material'
 // import home from '../images/home.jpg'
@@ -38,39 +40,16 @@ const Home = () =>{
                     {/* <Typography className="homeAdjust">MUI provides a robust, customizable, and accessible library of foundational and advanced components, enabling you to build your own design system and develop React applications faster.</Typography> */}
                     {/* <Button variant="contained" href="/Dslist" id="createId" endIcon={<NavigateNextIcon />}>Visualize</Button> */}
                 </Grid>
+
+                {/* scrolling bar */}
                 <Grid item xs={12} sm={6}>
                     <Card>
-                        <main>
+                      <main>
                         <div className='scroll-bg'>
                             <div className='scroll-div'>
                                 <div className='scroll-object'>
-                                  <p className='cmmt'> //pop function</p><br></br>
-                                   <p className='stat'> const fruits =["Banana","Orange","Apple","Mango"];</p><br></br>
-                                    fruis.pop();<br></br>
-
-                                    <p className='cmmt'> //push function</p><br></br>
-                                    const fruits =["Banana","Orange","Apple","Mango"];<br></br>
-                                    fruits.push("Kiwi");<br></br>
-
-                                    <p className='cmmt'> //print the list items</p><br></br>
-                                    printList() <br></br>
-                                    var curr=this.head;<br></br>
-                                    var str='''';<br></br>
-                                    curr=curr.next;  <br></br>                                  
-                                    console.log(str);<br></br>
-
-
-                                    <p className='cmmt'> //pop function</p><br></br>
-                                    const fruits =["Banana","Orange","Apple","Mango"];
-                                    fruis.pop();<br></br>
-
-                                   <p className='cmmt'> //push function</p><br></br>
-                                    const fruits =["Banana","Orange","Apple","Mango"];
-                                    fruits.push("Kiwi");<br></br>
-
-                                   <p className='cmmt'> //pop function</p><br></br>
-                                    const fruits =["Banana","Orange","Apple","Mango"];
-                                    fruis.pop();<br></br>
+                                <div className='img'><img src={Bstfun} alt="per1" /></div>                                                                              
+                                <div className='img'><img src={Stackfun} alt="per1" /></div>                                                                              
 
                                     
                                 </div>
