@@ -165,7 +165,7 @@ const LandingPage = ()=>{
                     </Typography>
                 </CardContent>
                 <CardActions>
-                    <Button href='/'  variant='contained' id="lighBoldText" size="small">Visualise</Button>
+                    <Button href='Linkedlist'  variant='contained' id="lighBoldText" size="small">Visualise</Button>
                 </CardActions>
                 </Card>
             </Grid>

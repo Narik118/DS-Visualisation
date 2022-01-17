@@ -3,9 +3,6 @@
     margin: 0;
     padding:0;
 }
-body{
-    background-color: #181313;
-}
 .App{
     height: 100vh;
 }
@@ -67,6 +64,36 @@ body{
 }
 
 /* Array component */
+
+
+/* Home page */
+.homeImg{
+    height: 50%;
+}
+#homeImgId{
+    height: 100%;
+    width: 100%;
+}
+.scroll-bg{
+    background: white !important;
+    /* margin: 10% auto; */
+    /* width: 600px; */
+     padding: 10ps 15px; 
+    /* border-radius: 50px; */
+}
+
+.scroll-div{
+    width: 700px;
+    height: 600px;
+    overflow: hidden;
+    overflow-y: scroll;
+}
+
+.scroll-object{
+    font-size: 15px;
+     padding: 20px;
+}
+
 
 
 /* Material UI default */
