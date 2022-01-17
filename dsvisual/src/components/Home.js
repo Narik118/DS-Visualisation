@@ -2,9 +2,10 @@ import {React, useEffect, useState} from 'react'
 import '../styles.css'
 import { Button, Grid, Card, CardMedia, Typography } from '@mui/material'
 import home from '../images/Array.png'
-import Bstfun from '../images/Bstfun.png'
-import Stackfun from '../images/Stackfun.png'
-import Arrarfun from '../images/Arrarfun.png'
+// import Bstfun from '../images/Bstfun.png'
+// import Stackfun from '../images/Stackfun.png'
+// import Arrarfun from '../images/Arrarfun.png'
+import Fun from '../images/Fun.png'
 // import { makeStyles, styled } from '@mui/styles';
 // import { Button, Grid, Card, CardMedia } from '@mui/material'
 // import home from '../images/home.jpg'
@@ -49,9 +50,10 @@ const Home = () =>{
                         <div className='scroll-bg'>
                             <div className='scroll-div'>
                                 <div className='scroll-object'>
-                                <div className='img'><img src={Stackfun} alt="per1" /></div>                                                                              
+                                {/* <div className='img'><img src={Stackfun} alt="per1" /></div>                                                                              
                                 <div className='img'><img src={Bstfun} alt="per1" /></div>                                                                              
-                                <div className='img'><img src={Arrarfun} alt="per1" /></div>                                                                           
+                                <div className='img'><img src={Arrarfun} alt="per1" /></div>                                                                            */}
+                                <div className='funimg'><img src={Fun} alt="per1" /></div>                                                                           
                                     
                                 </div>
                             </div>

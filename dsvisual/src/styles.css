@@ -71,26 +71,25 @@ body{
 
 /* Home page */
 .scroll-bg{
-    background: white !important;
+    background: black !important;
     /* margin: 10% auto; */
     /* width: 600px; */
      padding: 10ps 15px; 
     /* border-radius: 50px; */
+
 }
 
 .scroll-div{
     width: 700px;
     height: 600px;
     overflow: hidden;
-    overflow-y: scroll;
+    overflow-y: scroll  ;
+    overflow-x: scroll  ;
+    padding-right: 25px;
 }
-
 .scroll-object{
-    font-size: 15px;
      padding: 20px;
 }
-
-
 
 /* Material UI default */
 .css-k4qjio-MuiFormHelperText-root{
