@@ -111,7 +111,7 @@ const LandingPage = ()=>{
                     </Typography>
                 </CardContent>
                 <CardActions>
-                    <Button href='/' variant='contained' id="lighBoldText" size="small">Visualise</Button>
+                    <Button href='Queue' variant='contained' id="lighBoldText" size="small">Visualise</Button>
                 </CardActions>
                 </Card>
             </Grid>
@@ -133,8 +133,7 @@ const LandingPage = ()=>{
                     Binary Search Tree
                     </Typography>
                     <Typography variant="body2" >
-                    An array is a data structure for storing more than one data item of similar data type,
-                    which take adjacent memory locations.
+                    A binary search tree follows some order to arrange the elements. In a Binary search tree, the value of left node must be smaller than the parent node, and the value of right node must be greater than the parent node.
                     </Typography>
                 </CardContent>
                 <CardActions>

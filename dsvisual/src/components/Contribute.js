@@ -16,6 +16,8 @@ import '../styles.css'
   })
 
 function contribute(){
+
+    
     return(
         <>
         <div id="ContributeGrid" className="contributePage">
@@ -24,17 +26,11 @@ function contribute(){
                 <Grid item xs={12} sm={6} >
                     <h1 className="fontSize">Present Contributer</h1>
                     <h3 className="contrAdjust">If you wanna contribute contact us:)</h3>
-                    <form className='formformat'>
-                        <TextField  focused variant='outlined' required  label='Name' size='small' type='name' id='name'></TextField>
-                        <Button variant='contained'>go</Button><br></br><br></br>
-                        <TextField  focused variant='outlined' required  label='Email' size='small' type='email' id='email'></TextField>
-                        <Button variant='contained'>go</Button><br></br>
-                        <Button variant='contained'>Submit</Button>
-                    </form>
-                </Grid>
-                <Grid item xs={12} sm={6}>
-                    
-             {/* Shahbaz profile */}
+        </Grid>
+
+
+       <Grid item xs={12} sm={6}>
+              {/* Shahbaz profile */}
         <div className='wrapper'>
             <div className='card'>
                 <div className='content'>
@@ -49,7 +45,7 @@ function contribute(){
         </div>
 
         {/* kiran profile */}
-        <div className='wrapper'>
+         <div className='wrapper'>
             <div className='card'>
                 <div className='content'>
                     <div className='img'><img src={kiran} alt="per2" /></div>
@@ -63,7 +59,7 @@ function contribute(){
         </div>
 
         {/* Absar profile */}
-        <div className='wrapper'>
+         <div className='wrapper'>
             <div className='card'>
                 <div className='content'>
                     <div className='img'><img src={Absar} alt="per1" /></div>
@@ -74,7 +70,7 @@ function contribute(){
                 </div>
                 <a href='https://www.linkedin.com/in/absaar-ali-rizwan-47b9621b0/'> Connect </a>
             </div>
-        </div>
+         </div> 
                     
                 </Grid>
             </Grid>

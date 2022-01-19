@@ -20,7 +20,7 @@ const useStyles = makeStyles(theme=>({
     }
 }))
 
-const Stacks = ()=>{
+const Queues = ()=>{
     const classes = useStyles();
 
     //Material Compoent
@@ -33,27 +33,27 @@ const Stacks = ()=>{
 
     //Validations states
     const [invalidInput, setInvalidInput] = useState(false)
-    const [invalidStackInput, setInvalidStackInput] = useState(false)
-    const [helperMessage, setHelperMessage] = useState('Enter stack values 1,2,3,4')
+    const [invalidQueueInput, setInvalidQueueInput] = useState(false)
+    const [helperMessage, setHelperMessage] = useState('Enter queue values 1,2,3,4')
 
 
     //state variables for actions
-    const [stackSize, setStackSize] = useState();
+    const [queueSize, setQueueSize] = useState();
     const [tempVal, setTempVal] = useState();
-    const [stackValues, setStackValues] = useState([]);
-    const [emptyStk, setStackValues2] = useState([]);
+    const [queueValues, setQueueValues] = useState([]);
+    const [emptyQue, setSQueueValues2] = useState([]);
     const [newVal, setNewVal] = useState();
     const values = []
     var values2 = []
 
 
     useEffect(()=>{
-        <CreateStack/>
-        console.log(emptyStk)
-    },[stackValues])
+        <CreateQueue/>
+        console.log(emptyQue)
+    },[queueValues])
 
-    const stackSizeInput = (e)=>{
-        setStackSize(e.target.value)
+    const queueSizeInput = (e)=>{
+        setQueueSize(e.target.value)
     }
 
     const onCreate=()=>{
@@ -65,38 +65,38 @@ const Stacks = ()=>{
             for(var i=0;i<numb.length;i++){
                 values.push(numb[i])
             }
-            setStackValues(values)
+            setQueueValues(values)
         }
         else if(tempVal === undefined){
-            alert("Stack created of size:"+ stackSize)
-            newStack()
+            alert("Queue created of size:"+ queueSize)
+            newQueue()
         }
-        else if(stackSize > 10){
+        else if(queueSize > 10){
             setInvalidInput(true);
         }
 
     }
 
-    const stackInput=(e)=>{
+    const queueInput=(e)=>{
         if(e.target.value.length > 19){
-            setInvalidStackInput(true)
+            setInvalidQueueInput(true)
         }
         else if(e.target.value.length>0){
             setTempVal(e.target.value);
         }
 
     }
-    //Function to create an empty stack
-    const newStack=()=>{         
-        for(var i=0;i<stackSize;i++){
+    //Function to create an empty queue
+    const newQueue=()=>{         
+        for(var i=0;i<queueSize;i++){
              values2.push(1)
          }     
-         setStackValues2(values2)
-        console.log(emptyStk)  
+         setSQueueValues2(values2)
+        console.log(emptyQue)  
         return(
             <Stack justifyContent='center' direction="row" divider={<Divider orientation="vertical" flexItem />} spacing={1} >
             <Stack direction='row'>
-            {emptyStk.map(item=>(
+            {emptyQue.map(item=>(
                 <Item id='itemId'>{item}</Item>
             ))}
             </Stack>
@@ -110,22 +110,22 @@ const Stacks = ()=>{
         console.log("message 2")
     }
 
-    const [newStk, setNewStk] = useState()
+    const [newQue, setNewQue] = useState()
     //push function
     const pushInput = ()=>{
-        if(stackValues.length < stackSize){
+        if(queueValues.length < queueSize){
         console.log(newVal,"message")
-        setNewStk(stackValues.push(newVal))
-        emptyStk.pop()
-        console.log(stackValues)
-        console.log(emptyStk)
-        const newstk = stackValues.concat(emptyStk)
-        console.log(newstk)
+        setNewQue(queueValues.push(newVal))
+        emptyQue.pop()
+        console.log(queueValues)
+        console.log(emptyQue)
+        const newque = queueValues.concat(emptyQue)
+        console.log(newque)
         
         return(
-            <Stack justifyContent='right' direction="row" divider={<Divider orientation="vertical" flexItem />} spacing={1} >
+            <Stack justifyContent='center' direction="row" divider={<Divider orientation="vertical" flexItem />} spacing={1} >
             <Stack direction='row'>
-            {newstk.map(item=>(
+            {newque.map(item=>(
                 <Item id='itemId'>{item}</Item>
             ))}
             </Stack>
@@ -133,19 +133,19 @@ const Stacks = ()=>{
         )
         }
         else{
-            alert("Stack is full")
+            alert("Queue is full")
         }
     }
     //pop function
     const popFunction=()=>{
-        setNewStk(stackValues.pop())
-        emptyStk.push('-')
-        console.log(stackValues)
-        console.log(emptyStk)
+        setNewQue(queueValues.pop())
+        emptyQue.push('-')
+        console.log(queueValues)
+        console.log(emptyQue)
         return(
             <Stack justifyContent='center' direction="row" divider={<Divider orientation="vertical" flexItem />} spacing={1} >
             <Stack direction='row'>
-            {stackValues.map(item=>(
+            {queueValues.map(item=>(
                 <Item id='itemId'>{item}</Item>
             ))}
             </Stack>
@@ -154,33 +154,33 @@ const Stacks = ()=>{
     }
     //peek function
     const peekFunction=()=>{
-        if(stackValues.length == 0){
-            alert("Stack is Empty")
+        if(queueValues.length == 0){
+            alert("Queue is Empty")
         }
         else{
-             var lastElement = stackValues[stackValues.length -1]
-             alert(`Element at top of the Stack is ${lastElement}`)
+             var lastElement = queueValues[queueValues.length -1]
+             alert(`Element at top of the Queue is ${lastElement}`)
            // for(var i=0;i<=arrayValues.length)
         }
 
     }
     //Empty function
     const emptyFunction=()=>{
-        if(stackValues.length == 0){
-            alert("Stack is Empty")
+        if(queueValues.length == 0){
+            alert("Queue is Empty")
         }
-        else if(stackValues.length != null){
-            console.log(stackValues)
-            alert("Stack is Full")
+        else if(queueValues.length != null){
+            console.log(queueValues)
+            alert("Queue is Full")
         }
     }
 
 
-    const CreateStack=()=>{
+    const CreateQueue=()=>{
         return(
         <Stack justifyContent='center' direction="row" divider={<Divider orientation="vertical" flexItem />} spacing={1} >
                 <Stack direction="column-reverse" className='outputSize'>
-                {stackValues.map(item=>(
+                {queueValues.map(item=>(
                     <Item id='itemId'>{item}</Item>
                 ))}
                 </Stack>
@@ -196,7 +196,7 @@ const Stacks = ()=>{
                      <Grid  direction='row' className='mainDiv' container >
                         <Grid textAlign='left' className='inputClass'>
                            <Stack direction="row" spacing={3}>
-                              <TextField variant='outlined' className={classes.textFeild} id='inputId' label='Enter size' size='small' onChange={stackSizeInput} type='number' error={invalidInput} helperText='Enter value less than 10'> </TextField>
+                              <TextField variant='outlined' className={classes.textFeild} id='inputId' label='Enter size' size='small' onChange={queueSizeInput} type='number' error={invalidInput} helperText='Enter value less than 10'> </TextField>
                               <Button variant='contained' id='createId' onClick={onCreate}>
                                 <NavigateNextIcon/>
                               </Button>
@@ -220,11 +220,11 @@ const Stacks = ()=>{
                           </Grid>
                       </Grid>
                   </Grid>
-                  <CreateStack/>
+                  <CreateQueue/>
                 </Grid>
             </ThemeProvider>
         </div>
     )
 }
 
-export default Stacks;
+export default Queues;
