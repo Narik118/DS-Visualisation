@@ -53,7 +53,7 @@
     margin-top: 100px;
 }
 .homePage{
-    color: white;
+    color: rgb(14, 13, 13);
 }
 .textSize{
     margin-left: 25px !important;
@@ -66,34 +66,43 @@
 /* Array component */
 
 
-/* Home page */
-.homeImg{
+        /* Home page */
+/* .homeImg{
     height: 50%;
-}
-#homeImgId{
+} */
+/* #homeImgId{
     height: 100%;
     width: 100%;
-}
-.scroll-bg{
-    background: black !important;
+} */
+/* .scroll-bg{
+    /* background: black !important; */
     /* margin: 10% auto; */
     /* width: 600px; */
-     padding: 10ps 15px; 
+     /* padding: 10ps 15px;  */
     /* border-radius: 50px; */
 
+/* } */ 
+
+.funimg{
+    width: 100%;
+    height: 100%;
+    padding-left: 25px;
 }
 
-.scroll-div{
-    width: 700px;
-    height: 600px;
-    overflow: hidden;
-    overflow-y: scroll  ;
-    overflow-x: scroll  ;
-    padding-right: 25px;
-}
-.scroll-object{
-     padding: 20px;
-}
+/* .scroll-div{
+    /* width: 700px; */
+    /* height:auto;
+    overflow: hidden; */
+    /* overflow-y: scroll  ; */
+    /* overflow-x: scroll  ; */
+    /* padding-right: 25px; */
+    
+/* } */ */
+/* .scroll-object{
+     /* padding: 20px; */
+/*      
+} */
+
 
 
 
@@ -160,7 +169,7 @@
 }
 
 .wrapper .card{
-    background: white;
+    background: rgb(15, 15, 15);
     width: 430px;
     display: flex;
     align-items: center;
@@ -196,8 +205,8 @@
     width: 90px;
     position: absolute;
     left: -5px;
-    background: white;
-    border-radius: 50%;
+    background: rgb(15, 15, 15);
+    /* border-radius: 50%; */
     padding: 5px;
     box-shadow: 0px 0px 5px rgba(0, 0, 0,2) ;
 }
@@ -205,7 +214,7 @@
 .card .img img{
     height:100%;
     width: 100%;
-    border-radius: 50%;
+    /* border-radius: 50%; */
     object-fit: cover;
 }
 
@@ -223,21 +232,24 @@
     padding: 7px 18px;
     border-radius: 25px;
     color: #fff; 
-    background: linear-gradient(to bottom, #bea2e7 0%, #86b7e7 100%) ;
+    background: linear-gradient(to bottom, #f6f4f8 0%, #141414 100%) ;
 }
 
 .fontSize{
     font-size: 75px;
     text-decoration:none;
-    color: white;
+    color: rgb(3, 3, 3);
 }
 
 .contrAdjust{
     margin-top: 15px;
     margin-bottom: 15px;
-    color: white;
+    color: rgb(7, 6, 6);
     justify-content: right;
   /* padding-left: 55%;  */
 }
-  
+
+.content{
+    color: white;
+}
 

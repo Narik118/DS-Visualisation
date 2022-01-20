@@ -22,7 +22,7 @@ function BST(){
   // const [newVal, setNewVal] = useState();
   // const [newArr, setNewArr] = useState()
   const takeInputHandler = (e)=>{
-    // setInput(e.target.value)
+    setInput(e.target.value)
     // setNewVal(e.target.value)
     console.log("message 2")
   }
@@ -89,6 +89,7 @@ const deletedata=()=>{
      <>
      <div>
      <ThemeProvider theme={theme}>
+     <Grid item xs={12} md={6}><h1>Explaination content...........</h1></Grid>
      <Grid container>
         <Grid item xs={12} md={6}>
         <Grid container direction='column'>
