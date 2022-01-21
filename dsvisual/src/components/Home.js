@@ -46,25 +46,26 @@ const Home = () =>{
 
                 {/* scrolling bar */}
                 <Grid item xs={12} sm={6}>
-                    {/* <Card>
+                    <Card>
                       <main>
                         <div className='scroll-bg'>
                             <div className='scroll-div'>
-                                <div className='scroll-object'> */}
+                                <div className='scroll-object'>
                                 {/* <div className='img'><img src={Stackfun} alt="per1" /></div>                                                                              
                                 <div className='img'><img src={Bstfun} alt="per1" /></div>                                                                              
                                 <div className='img'><img src={Arrarfun} alt="per1" /></div>                                                                            */}
-                                <div><img className='funimg' src={Fun} alt="per1"  /></div>                                                                           
+                                <div><img className='funimg' src={Fun} alt="per1"  /></div>                                                                                                                                                
                                     
-                                {/* </div>
+                                </div>
                             </div>
                         </div>
                                     </main>
-                    </Card> */}
+                    </Card>
                 </Grid>
             </Grid>
             </ThemeProvider>
         </div>
+        
     )
 
 }
