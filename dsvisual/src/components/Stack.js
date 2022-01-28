@@ -192,6 +192,12 @@ const Stacks = ()=>{
         <div>
             <ThemeProvider theme={theme}>
                 <Grid container spacing={1}>
+                    <Grid item xs={12}>
+                        <h1>ANIMATIO I</h1>
+                    </Grid>
+                    <Grid>
+                        <h1>ANIMATION II</h1>
+                    </Grid>
                   <Grid item xs={6}>
                      <Grid  direction='row' className='mainDiv' container >
                         <Grid textAlign='left' className='inputClass'>
@@ -203,11 +209,6 @@ const Stacks = ()=>{
                            </Stack>
                         </Grid>
                      </Grid>
-                  </Grid>
-                  <Grid xs={6}>
-                      
-                  </Grid>
-                  <Grid xs={6}>
                       <Grid className='mainDiv' container>
                           <Grid textAlign='left' className='inputClass'>
                              <Stack spacing={1.5}>
