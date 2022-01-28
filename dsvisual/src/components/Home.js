@@ -31,22 +31,24 @@ const theme =  createMuiTheme({
 
 const Home = () =>{
     return(
-        <div id="landingGrid" className="homePage">
+        <div>
+            
             <ThemeProvider theme={theme}>
             <Grid container spacing={2}>
                 <Grid item xs={12} sm={6}>
+                <div  id="landingGrid" className="homePage">
                     <Typography variant='h6' color='primary' fontWeight='bold'>&lt;ds&gt;</Typography>
                     {/* <br/> */}
                     <Typography variant='h1' color='primary' className="textSize">Learn data structures visually <span></span> </Typography>
                     {/* <br/> */}
-                    <Typography variant='h6'color='primary' fontWeight='bold'>&lt;/ds&gt;</Typography>
+                    <Typography variant='h6'color='primary' fontWeight='bold'>&lt;/ds&gt;</Typography><br></br>
                      <Typography className="homeAdjust">MUI provides a robust, customizable, and accessible library of foundational and advanced components, enabling you to build your own design system and develop React applications faster.</Typography> <br></br><br></br>
-                    <Button variant='contained' href="/Dslist" className="getStarted" >Get Started </Button>
+                    <Button variant='contained' href="/Dslist" className="getStarted" >Get Started </Button></div>
                 </Grid>
-
+                
                 {/* scrolling bar */}
                 <Grid item xs={12} sm={6}>
-                    <Card>
+                    <Card><div className='main-scroll-div'>
                       <main>
                         <div className='scroll-bg'>
                             <div className='scroll-div'>
@@ -59,7 +61,7 @@ const Home = () =>{
                                 </div>
                             </div>
                         </div>
-                                    </main>
+                                    </main></div>
                     </Card>
                 </Grid>
             </Grid>

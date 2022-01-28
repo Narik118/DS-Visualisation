@@ -74,6 +74,20 @@ function contribute(){
                 <a href='https://www.linkedin.com/in/absaar-ali-rizwan-47b9621b0/'> Connect </a>
             </div>
          </div> 
+
+{/* <div class="card">
+  <img className='pro-img' src={Absar} alt="John" /> 
+  <h1>John Doe</h1>
+  <p class="title">CEO & Founder, Example</p>
+  <p>Harvard University</p>
+  <div className='cont-div'>
+    <a href="#"><i class="fa fa-dribbble"></i></a> 
+    <a href="#"><i class="fa fa-twitter"></i></a>  
+    <a href="#"><i class="fa fa-linkedin"></i></a>  
+    <a href="#"><i class="fa fa-facebook"></i></a> 
+  </div>
+  <p><button>Contact</button></p>
+</div> */}
                     
                 </Grid>
             </Grid>
