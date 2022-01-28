@@ -89,7 +89,8 @@ const deletedata=()=>{
      <>
      <div>
      <ThemeProvider theme={theme}>
-     <Grid item xs={12} md={6}><h1>Explaination content...........</h1></Grid>
+     <Grid item xs={12} md={6}><h1>ANIMATION I</h1></Grid>
+     <Grid item xs={12} md={6}><h1>ANIMATION II</h1></Grid>
      <Grid container>
         <Grid item xs={12} md={6}>
         <Grid container direction='column'>
