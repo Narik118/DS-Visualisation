@@ -148,8 +148,13 @@ const Array = () => {
         <>
             <ThemeProvider theme={theme}>
                 <Grid container>
-
-                    <Grid item xs={12} md={6}>
+                    <Grid item xs = {12}>
+                        <h1>ANIMATION I</h1>
+                    </Grid>
+                    <Grid item xs = {12}>
+                        <h1>ANIMATION II</h1>
+                    </Grid>
+                    <Grid item xs={6} md={6}>
                         <Grid container direction='column'>
                             <Grid item direction='column'>
                                 <Grid container direction='column' className='allInputsGrid'>
@@ -169,11 +174,6 @@ const Array = () => {
                             </Grid>
                         </Grid>
                     </Grid>
-
-                    <Grid item xs={12} md={6}>
-                        <h1>Kiran</h1>
-                    </Grid>
-
                     {/* <Grid item xs={12} md={6} alignItems="center"  className='inputClass'>
                     <div className='inputDiv'>
                     <TextField variant='outlined' color='primary' focused className={classes.textFeild} id='inputId' label='Enter size' size='small' onChange={arraySizeInput} type='number' error={invalidInput} helperText='Enter value less than 10'> </TextField> 

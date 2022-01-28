@@ -94,7 +94,7 @@ const Queues = ()=>{
          setSQueueValues2(values2)
         console.log(emptyQue)  
         return(
-            <Stack justifyContent='center' direction="row" divider={<Divider orientation="vertical" flexItem />} spacing={1} >
+            <Stack justifyContent='center' direction="row"  spacing={1} >
             <Stack direction='row'>
             {emptyQue.map(item=>(
                 <Item id='itemId'>{item}</Item>
@@ -123,7 +123,7 @@ const Queues = ()=>{
         console.log(newque)
         
         return(
-            <Stack justifyContent='center' direction="row" divider={<Divider orientation="vertical" flexItem />} spacing={1} >
+            <Stack justifyContent='center' direction="row" spacing={1} >
             <Stack direction='row'>
             {newque.map(item=>(
                 <Item id='itemId'>{item}</Item>
@@ -143,7 +143,7 @@ const Queues = ()=>{
         console.log(queueValues)
         console.log(emptyQue)
         return(
-            <Stack justifyContent='center' direction="row" divider={<Divider orientation="vertical" flexItem />} spacing={1} >
+            <Stack justifyContent='center' direction="row" spacing={1} >
             <Stack direction='row'>
             {queueValues.map(item=>(
                 <Item id='itemId'>{item}</Item>
@@ -178,8 +178,8 @@ const Queues = ()=>{
 
     const CreateQueue=()=>{
         return(
-        <Stack justifyContent='center' direction="row" divider={<Divider orientation="vertical" flexItem />} spacing={1} >
-                <Stack direction="column-reverse" className='outputSize'>
+        <Stack justifyContent='center' direction="row" spacing={1} >
+                <Stack direction="row" className='outputSize'>
                 {queueValues.map(item=>(
                     <Item id='itemId'>{item}</Item>
                 ))}
@@ -192,7 +192,13 @@ const Queues = ()=>{
         <div>
             <ThemeProvider theme={theme}>
                 <Grid container spacing={1}>
-                  <Grid item xs={6}>
+                <Grid item xs={12}>
+                        <h1>ANIMATIO I</h1>
+                    </Grid>
+                    <Grid>
+                        <h1>ANIMATION II</h1>
+                    </Grid>
+                  <Grid item xs={6}>                     
                      <Grid  direction='row' className='mainDiv' container >
                         <Grid textAlign='left' className='inputClass'>
                            <Stack direction="row" spacing={3}>
@@ -203,11 +209,6 @@ const Queues = ()=>{
                            </Stack>
                         </Grid>
                      </Grid>
-                  </Grid>
-                  <Grid xs={6}>
-                      
-                  </Grid>
-                  <Grid xs={6}>
                       <Grid className='mainDiv' container>
                           <Grid textAlign='left' className='inputClass'>
                              <Stack spacing={1.5}>
