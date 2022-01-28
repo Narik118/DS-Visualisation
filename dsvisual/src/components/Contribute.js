@@ -37,12 +37,15 @@ function contribute(){
                     <div className='img'><img src={Shahbaz} alt="per1" /></div>
                    <div className='details'>
                    <span className='name'> Mohammed Shahbaz </span>
-                    <p>Class of 2023 at Osmania university Experience with JavaScript, React. js</p>
+                    <p className='cont'>Class of 2023 at Osmania university Experience with JavaScript, React. js</p>
                    </div>
                 </div>
                 <a href='https://www.linkedin.com/in/mohammed-shahbaz-2786261ba'> Connect </a>
             </div>
         </div>
+
+
+        
 
         {/* kiran profile */}
          <div className='wrapper'>
