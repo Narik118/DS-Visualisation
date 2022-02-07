@@ -1,6 +1,6 @@
 import {React, useEffect, useState} from 'react' 
 import '../styles.css'
-import { Grid, Stack, Divider, Paper, TextField, Button, Card} from '@mui/material'
+import { Grid, Stack, Divider, Paper, TextField, Button, Card, CardMedia} from '@mui/material'
 import { makeStyles, styled } from '@mui/styles';
 import NavigateNextIcon from '@mui/icons-material/NavigateNext';
 import { createMuiTheme, ThemeProvider } from '@mui/material';
@@ -193,7 +193,9 @@ const Stacks = ()=>{
             <ThemeProvider theme={theme}>
                 <Grid container spacing={1}>
                     <Grid item xs={12}>
-                        <h1>ANIMATIO I</h1>
+                        <video autoPlay height="300 px" width="500 px" controls loop>
+                            <source src="PUSHfun.mp4" type="video/mp4"></source>
+                        </video>
                     </Grid>
                     <Grid>
                         <h1>ANIMATION II</h1>
