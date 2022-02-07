@@ -4,7 +4,7 @@ import { Grid, Stack, Divider, Paper, TextField, Button, Card, CardMedia} from '
 import { makeStyles, styled } from '@mui/styles';
 import NavigateNextIcon from '@mui/icons-material/NavigateNext';
 import { createMuiTheme, ThemeProvider } from '@mui/material';
-
+import stackVid from '../images/AnimatedPUSHfun.mp4';
 
 const theme =  createMuiTheme({
     palette:{
@@ -193,8 +193,8 @@ const Stacks = ()=>{
             <ThemeProvider theme={theme}>
                 <Grid container spacing={1}>
                     <Grid item xs={12}>
-                        <video autoPlay height="300 px" width="500 px" controls loop>
-                            <source src="PUSHfun.mp4" type="video/mp4"></source>
+                        <video autoPlay height="300px" width="500px" controls loop>
+                            <source src={stackVid} type="video/mp4"></source>
                         </video>
                     </Grid>
                     <Grid>
