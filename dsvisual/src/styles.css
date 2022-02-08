@@ -26,6 +26,7 @@
 #createId{
     height: 38px;
     margin-left: 3px;
+    color: #212121;
 }
 
 #itemId{
@@ -263,6 +264,11 @@
 
 .content{
     color: white;
+}
+
+.leftpadding{
+    padding-right: 100px;
+    float: left;
 }
 
 /* .card {
