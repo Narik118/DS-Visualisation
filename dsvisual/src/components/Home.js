@@ -7,7 +7,6 @@ import home from '../images/Array.png'
 // import Arrarfun from '../images/Arrarfun.png'
 import Fun from '../images/Fun.png'
 // import { makeStyles, styled } from '@mui/styles';
-// import { Button, Grid, Card, CardMedia } from '@mui/material'
 // import home from '../images/home.jpg'
 import { makeStyles, styled } from '@mui/styles';
 import NavigateNextIcon from '@mui/icons-material/NavigateNext';
