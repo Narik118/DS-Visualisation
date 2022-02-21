@@ -4,7 +4,7 @@ import { Grid, Stack, Divider, Paper, TextField, Button, styled } from '@mui/mat
  import { createMuiTheme, ThemeProvider,} from '@mui/material';
 import { BinarySearchTree, useTree } from 'react-tree-vis';
 import NavigateNextIcon from '@mui/icons-material/NavigateNext';
-import BSTVid from '../images/AnimatedBST.mp4';
+import BSTVid from '../images/BSTAnimate.mp4';
 const theme =  createMuiTheme({
   palette:{
       primary:{
