@@ -203,7 +203,7 @@ const Stacks = ()=>{
                             <source src={stackVid2} type="video/mp4"></source>
                         </video>
                     </Grid>
-                  <Grid item xs={6} className='leftpadding' style="float: left">
+                  <Grid item xs={6} className='leftpadding'>
                       <div >
                      <Grid  direction='row' className='mainDiv' container >
                         <Grid textAlign='left' className='inputClass'>
