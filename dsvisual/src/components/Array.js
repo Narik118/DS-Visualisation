@@ -4,7 +4,7 @@ import { Grid, Stack, Divider, Paper, TextField, Button, Alert, Snackbar, Typogr
 import { makeStyles, styled } from '@mui/styles';
 import NavigateNextIcon from '@mui/icons-material/NavigateNext';
 import { createMuiTheme, ThemeProvider } from '@mui/material';
-import stackVid2 from '../images/AnimatedPOPfun.mp4';
+import stackVid2 from '../images/20220215_1440p.mp4';
 import AlertNotify from './Alert';
 import { fontFamily } from '@mui/system';
 

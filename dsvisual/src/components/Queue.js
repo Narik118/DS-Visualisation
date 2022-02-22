@@ -4,7 +4,7 @@ import { Grid, Stack, Divider, Paper, TextField, Button, Card} from '@mui/materi
 import { makeStyles, styled } from '@mui/styles';
 import NavigateNextIcon from '@mui/icons-material/NavigateNext';
 import { createMuiTheme, ThemeProvider } from '@mui/material';
-import stackVid2 from '../images/AnimatedPOPfun.mp4';
+import stackVid2 from '../images/20220220_1440p.mp4';
 
 
 const theme =  createMuiTheme({
